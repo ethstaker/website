@@ -42,7 +42,7 @@ The following are key tips we have learned over time to help stay safe. This con
 **Helpful links:**
 - [Discord safety guide](https://discord.com/safety/360043857751-four-steps-to-a-super-safe-account)
 - [Reddit safety rules](https://www.reddit.com/r/NewToReddit/wiki/ntr-guidetoreddit#wiki_part_7.3A__safety_on_reddit)
-- [Crypto security basics](https://www.kaspersky.com/resource-center/preemptive-safety/guide-to-cryptocurrency-safety)
+- [Crypto security basics](https://www.arkoselabs.com/explained/guide-to-cryptocurrency-security/)
 
 The crypto ecosystem includes many malicious actors. Be cautious, protect your keys, and stay alert.
 
