@@ -25,17 +25,10 @@ The day will feature talks, panels, workshops, and networking covering everythin
 
 Whether you're operating one validator at home or coordinating thousands across data centers, this event is for you.
 
-**Tickets: Coming soon**
-
-
-{% include partials/components/simple-form.html
-  context="ticketSub"
-  form_id="1FAIpQLSesMyuJlrt_KpAg4izbazmlfD8XlrIbyCiIky1YaLdpr7KA9Q"
-  title="Get notified when tickets are available!"
-  input_text="Email"
-  type="email"
-  placeholder="name@example.com"
-  entry_id="entry.867548303"
+{% include partials/components/button.html
+  link="https://tickets.ethstaker.org/ethstaker/devconnect/"
+  text="Buy Tickets"
+  size="sm"
 %}
 
 
