@@ -28,7 +28,9 @@ Whether you're operating one validator at home or coordinating thousands across 
 {% include partials/components/button.html
   link="https://tickets.ethstaker.org/ethstaker/devconnect/"
   text="Buy Tickets"
-  size="sm"
+  size="lg"
+  align="center"
+  display="block"
 %}
 
 
@@ -54,7 +56,7 @@ Speaker applications are already open! All talks will be selected with the goal 
 {% include partials/components/button.html
   link="/forms/staking-gathering-speaker-application-2025"
   text="Speaker Application"
-  size="sm"
+  size="md"
 %}
 
 
@@ -69,7 +71,7 @@ Sponsor packages are available now, reach out early to lock in your spot and tea
 {% include partials/components/button.html
   link="https://docs.google.com/presentation/d/1BkxUykbg_QVEcKh8y6alqoy2uukQF1Ashl5nK8Yfzus/"
   text="Sponsor Guide"
-  size="sm"
+  size="md"
 %}
 
 

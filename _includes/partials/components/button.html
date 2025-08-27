@@ -25,5 +25,20 @@ Usage:
   {%- assign type = "-outline" -%}
 {%- endif -%}
 
+{%- assign align = "" -%}
+{%- if include.align -%}
+  {%- assign align = include.align -%}
+{%- endif -%}
 
-<a href="{{include.link | anchor}}" class="btn btn{{type}}-dark btn-{{size}} shadow">{{include.text}}</a>
+{%- assign display = "" -%}
+{%- if include.display -%}
+  {%- assign display = include.display -%}
+{%- endif -%}
+
+{%- assign theme = "dark" -%}
+{%- if include.theme -%}
+  {%- assign theme = include.theme -%}
+{%- endif -%}
+
+
+<a href="{{include.link | anchor}}" class="btn btn{{type}}-{{theme}} btn-{{size}} text-{{align}} d-{{display}} shadow">{{include.text}}</a>
