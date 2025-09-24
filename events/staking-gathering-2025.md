@@ -60,7 +60,17 @@ Speaker applications are already open! All talks will be selected with the goal 
 %}
 
 
-### Schedule - Coming Soon
+### Schedule
+
+Featured speakers (announced: https://x.com/ethStaker/status/1967608955611521154)
+- Danny Ryan, Etherealize
+- Jerome de Tychey, Cometh & Ethereum France
+- Marius van der Wijden, Geth / Ethereum Foundation
+- Anthony Sassano, The Daily Gwei
+- Ladislaus von Daniels, Protocol Coordination / Ethereum Foundation
+
+Full detailed schedule soon!
+
 
 
 ### Sponsor the Gathering
