@@ -30,9 +30,12 @@
 - title: Checkpoints
   link: https://eth-clients.github.io/checkpoint-sync-endpoints/
   icon: cycle
-- title: Jobs
-  link: /jobs/job-listings
-  icon: briefcase
+- title: Grants
+  link: /grants
+  icon: money
+# - title: Jobs
+#   link: /jobs/job-listings
+#   icon: briefcase
 - title: Smoothing Pools
   link: /smoothing-pools
   icon: people
