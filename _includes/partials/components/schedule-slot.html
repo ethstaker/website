@@ -1,0 +1,53 @@
+<style>
+  .schedule-entry {
+    border-bottom: 1px solid #dee2e6;
+    padding: 0.75rem;
+  }
+  .dark-mode .schedule-entry {
+    border-bottom: 1px solid #e9ecef12;
+  }
+  .schedule-entry:last-child {
+    border-bottom: none;
+  }
+  .schedule-entry .time {
+    font-weight: 600;
+    /*color: #0d6efd;*/
+    min-width: 140px;
+  }
+  @media (max-width: 576px) {
+    .schedule-entry .time {
+      min-width: auto;
+      margin-bottom: 0.25rem;
+    }
+  }
+</style>
+
+{%- if include.hide != "true" -%}
+  <div class="schedule-entry">
+    <div class="row">
+      {%- if include.time != "TBA" -%}
+        <div class="col-12 col-md-3 time">{{include.time}}</div>
+      {%- endif -%}
+      <div class="col">
+        {%- if include.speaker -%}
+          <strong>{{include.speaker}} </strong>
+          {%- if include.affiliation -%}
+            — <em>{{include.affiliation}}</em>
+          {%- endif -%}
+          {%- if include.topic -%}
+            <br>
+            {%- if include.topic == "" -%}
+              <span>Topic TBA</span>
+            {%- else -%}
+              <span>“{{include.topic | titlecase}}”</span>
+            {%- endif -%}
+          {%- endif -%}
+        {%- else -%}
+          <span class="text-muted">{{include.topic | titlecase}}</span>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+
