@@ -6,13 +6,13 @@ subheader: 'Malba, Buenos Aires - November 18, 2025'
 note: Timeslots are being finalized
 ---
 
-<!-- ![](/assets/img/devconnect-2025/banner.webp) -->
+![](/assets/img/devconnect-2025/banner.webp)
 
 <style>
   .session-title {
     /*background-color: #0d6efd;*/
     color: var(--bs-body-color);
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 0rem;
     border-radius: 0.3rem;
     margin-top: 2rem;
   }
