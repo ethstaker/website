@@ -34,7 +34,11 @@
 
         {%- if page.buttons -%}
           {%- for button in page.buttons -%}
-            <a href="{{button.link | liquify}}" class="btn btn-outline-dark px-4 mx-2 my-1 shadow">{{button.text | liquify}}</a>
+            {%- assign design = "btn-outline-dark" -%}
+            {%- if button.primary == true -%}
+              {%- assign design = "btn-dark" -%}
+            {%- endif -%}
+            <a href="{{button.link | liquify}}" class="btn {{design}} px-4 mx-2 my-1 shadow">{{button.text | liquify}}</a>
           {%- endfor -%}
         {%- endif -%}
       </div>

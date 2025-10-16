@@ -4,6 +4,10 @@ title: Staking Gathering Schedule
 permalink: events/staking-gathering-2025/schedule
 subheader: 'Malba, Buenos Aires - November 18, 2025'
 note: Timeslots are being finalized
+buttons:
+- link: 'https://tickets.ethstaker.org/ethstaker/devconnect/'
+  text: Buy Tickets
+  primary: true
 ---
 
 ![](/assets/img/devconnect-2025/banner.webp)
@@ -91,7 +95,7 @@ note: Timeslots are being finalized
   topic="Lunch"
 %}
 
-<h3 class="session-title mb-3">Afternoon Session</h3>
+<div class="session-title mb-3 h4">Afternoon Session</div>
 
 {% include partials/components/schedule-slot.html
   time="1:30pm - 1:55pm"
