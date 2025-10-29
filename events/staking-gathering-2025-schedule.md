@@ -68,7 +68,7 @@ buttons:
 
 
 {% include partials/components/schedule-slot.html
-  time="10:15am - 11:35am"
+  time="11:15am - 11:35am"
   speaker="dionysuz.eth"
   topic="On maintaining a healthy fork choice"
 %}
@@ -81,13 +81,13 @@ buttons:
 %}
 
 {% include partials/components/schedule-slot.html
-  time="10:40am - 11:00am"
+  time="11:55am - 12:15am"
   speaker="TBD"
   affiliation="Aztec"
 %}
 
 {% include partials/components/schedule-slot.html
-  time="11:00am - 11:15am"
+  time="12:15am - 1:10am"
   topic="Lunch"
 %}
 
