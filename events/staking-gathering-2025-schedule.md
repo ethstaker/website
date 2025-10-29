@@ -31,198 +31,191 @@ buttons:
 
 
 {% include partials/components/schedule-slot.html
-  time="9:00am - 10:00am"
-  time="TBA"
+  time="9:00am - 9:55am"
   topic="Breakfast"
 %}
 
-
 {% include partials/components/schedule-slot.html
-  time="10:00am - 10:10am"
-  time="TBA"
+  time="9:55am - 10:00am"
   topic="Opening Remarks"
 %}
 
 {% include partials/components/schedule-slot.html
-  time="10:10am - 10:30am"
-  time="TBA"
+  time="10:00am - 10:20am"
   speaker="Kody Sale"
   affiliation="Obol"
   topic="Correlated failures and network impact"
 %}
 
 {% include partials/components/schedule-slot.html
-  time="10:30am - 11:00am"
-  time="TBA"
-  speaker="Marius van der Wijden"
-  affiliation="Ethereum Foundation"
-  topic="Sustainable Scaling"
-%}
-
-{% include partials/components/schedule-slot.html
-  time="11:00am - 11:30am"
-  time="TBA"
-  speaker="Ladislaus von Daniels"
-  affiliation="Ethereum Foundation"
-  topic="Validating with zkExecution clients"
-%}
-
-{% include partials/components/schedule-slot.html
-  time="11:30am - 11:45am"
-  time="TBA"
-  topic="Break"
-  hide="true"
-%}
-
-{% include partials/components/schedule-slot.html
-  time="11:45am - 12:05pm"
-  time="TBA"
-  speaker="Hildobby"
-  topic=""
-%}
-
-{% include partials/components/schedule-slot.html
-  time="12:05pm - 12:30pm"
-  time="TBA"
-  speaker="Izzy"
-  affiliation="Lido"
-  topic="Upgrading Ethereum, Upgrading Lido"
-%}
-
-{% include partials/components/schedule-slot.html
-  time="12:30pm - 1:30pm"
-  time="TBA"
-  topic="Lunch"
-%}
-
-<div class="session-title mb-3 h4">Afternoon Session</div>
-
-{% include partials/components/schedule-slot.html
-  time="1:30pm - 1:55pm"
-  time="TBA"
-  speaker="Advaita Saha"
-  affiliation="Nimbus"
-  topic="Shrink Your Node: The Small-Footprint Nimbus Execution Client"
-%}
-
-{% include partials/components/schedule-slot.html
-  time="1:55pm - 2:10pm"
-  time="TBA"
-  speaker="Leo"
-  affiliation="MigaLabs"
-  topic="Analysing Validators Performance in the Present and in the Future"
-%}
-
-{% include partials/components/schedule-slot.html
-  time="2:10pm - 2:40pm"
-  time="TBA"
-  speaker="Danny Ryan"
-  affiliation="Etherealize"
-  topic="Fireside Chat"
-%}
-
-{% include partials/components/schedule-slot.html
-  time="2:40pm - 3:10pm"
-  time="TBA"
-  speaker="Anthony Sassano"
-  affiliation="The Daily Gwei"
-  topic=""
-%}
-
-{% include partials/components/schedule-slot.html
-  time="3:10pm - 3:40pm"
-  time="TBA"
-  speaker="Darren Langley"
-  affiliation="Rocket Pool"
-  topic="The Stakes Remain High: Keeping Ethereum Decentralized"
-%}
-
-{% include partials/components/schedule-slot.html
-  time="3:40pm - 4:00pm"
-  time="TBA"
-  speaker="Oisín Kyne"
-  affiliation="Obol"
-  topic="Programmable staking: Smart contract based withdrawal credentials"
-%}
-
-{% include partials/components/schedule-slot.html
-  time="4:00pm - 4:30pm"
-  time="TBA"
-  speaker="Jérôme de Tychey"
-  affiliation="Ethereum France / Cometh"
-  topic="Introduction to Issuance Curve topics"
-%}
-
-{% include partials/components/schedule-slot.html
-  time="4:30pm - 4:45pm"
-  time="TBA"
-  topic="Break"
-%}
-
-{% include partials/components/schedule-slot.html
-  time="4:45pm - 5:10pm"
-  time="TBA"
+  time="10:20am - 10:40am"
   speaker="Dima Gusakov"
   affiliation="Lido"
   topic="Home Staking landscape with Lido CSM"
 %}
 
 {% include partials/components/schedule-slot.html
-  time="5:10pm - 5:40pm"
-  time="TBA"
-  speaker="BTCS / Ether Machine / Bitwise"
-  speaker="Institutional Staking Panel"
-  affiliation="Moderated by Anthony Sassano"
+  time="10:40am - 11:00am"
+  speaker="Alon"
+  affiliation="SSV"
+  topic="Compose Network: A New Validator Revenue Opportunity"
 %}
 
 {% include partials/components/schedule-slot.html
-  time="5:40pm - 6:00pm"
-  time="TBA"
-  speaker="GLCstaked"
-  affiliation="StakeCat"
-  topic="The Centralization War Lives On"
+  time="11:00am - 11:15am"
+  topic="Break"
+%}
+
+
+{% include partials/components/schedule-slot.html
+  time="10:15am - 11:35am"
+  speaker="dionysuz.eth"
+  topic="On maintaining a healthy fork choice"
 %}
 
 {% include partials/components/schedule-slot.html
-  time="6:00pm - 6:15pm"
-  time="TBA"
-  speaker="Marcos Maceo"
-  affiliation="Nethermind"
-  topic="How to use Sedge for Solo and Home Staking"
-  hide="true"
+  time="11:35am - 11:55am"
+  speaker="Paladin + Dave"
+  affiliation="Rocksolid"
+  topic="How DeFi vaults are helping Rocket Pool grow"
 %}
 
 {% include partials/components/schedule-slot.html
-  time="6:15pm - 6:35pm"
-  time="TBA"
-  speaker="Hudson Jameson"
-  topic="Ethereum through the eyes of a solo staker since the testnets"
-  hide="true"
+  time="10:40am - 11:00am"
+  speaker="TBD"
+  affiliation="Aztec"
 %}
 
 {% include partials/components/schedule-slot.html
-  time="6:35pm - 6:55pm"
-  time="TBA"
+  time="11:00am - 11:15am"
+  topic="Lunch"
+%}
+
+
+<div class="session-title mb-3 h4">Afternoon Session</div>
+
+{% include partials/components/schedule-slot.html
+  time="1:10pm - 1:30pm"
+  speaker="Marius van der Wijden"
+  affiliation="Ethereum Foundation"
+  topic="Sustainable Scaling"
+%}
+
+{% include partials/components/schedule-slot.html
+  time="1:30pm - 1:50pm"
+  speaker="Ladislaus von Daniels"
+  affiliation="Ethereum Foundation"
+  topic="Validating with zkExecution clients"
+%}
+
+{% include partials/components/schedule-slot.html
+  time="1:50pm - 2:10pm"
+  speaker="Francesco"
+  affiliation="EF Protocol Architecture"
+  topic="Single Slot Finality and the Future of Staking"
+%}
+
+{% include partials/components/schedule-slot.html
+  time="2:10pm - 2:30pm"
+  speaker="Advaita Saha"
+  affiliation="Nimbus"
+  topic="Shrink Your Node: The Small-Footprint Nimbus Execution Client"
+%}
+
+{% include partials/components/schedule-slot.html
+  time="2:30pm - 2:50pm"
   speaker="Luca"
   affiliation="Vero / Serenita"
   topic="Improving Ethereum resilience with multi-node validator setups"
 %}
 
 {% include partials/components/schedule-slot.html
+  time="2:50pm - 3:05pm"
+  topic="Break"
+%}
+
+
+{% include partials/components/schedule-slot.html
+  time="3:05pm - 3:30pm"
+  speaker="Danny Ryan (Etherealize)"
+  affiliation="Interviewed by Thorsten Behrens"
+  topic="Fireside Chat"
+%}
+
+{% include partials/components/schedule-slot.html
+  time="3:30pm - 3:55pm"
+  speaker="Jérôme de Tychey"
+  affiliation="Ethereum France / Cometh"
+  topic="Introduction to Issuance Curve topics"
+%}
+
+{% include partials/components/schedule-slot.html
+  time="3:55pm - 4:15pm"
+  speaker="Darren Langley"
+  affiliation="Rocket Pool"
+  topic="The Stakes Remain High: Keeping Ethereum Decentralized"
+%}
+
+{% include partials/components/schedule-slot.html
+  time="4:15pm - 4:35pm"
+  speaker="Hudson Jameson"
+  topic="Ethereum through the eyes of a solo staker since the testnets"
+%}
+
+{% include partials/components/schedule-slot.html
+  time="4:35pm - 4:50pm"
+  topic="Break"
+%}
+
+{% include partials/components/schedule-slot.html
+  time="4:50pm - 5:10pm"
+  speaker="Hildobby"
+  topic="Analyzing the Impact of ETF staking"
+%}
+
+{% include partials/components/schedule-slot.html
+  time="5:10pm - 5:35pm"
+  speaker="Hong Kim (Bitwise), Benjamin Hunter (BTCS)"
+  affiliation="Moderated by Anthony Sassano"
+  topic="Institutional Staking Panel"
+%}
+
+{% include partials/components/schedule-slot.html
+  time="5:35pm - 5:55pm"
+  speaker="Parithosh Jayanthi (ethPandaOps), Barnabas (EF)"
+  topic="ethPandaOps Fusaka Testing Deep Dive"
+%}
+
+{% include partials/components/schedule-slot.html
+  time="5:55pm - 6:15pm"
+  speaker="Izzy"
+  affiliation="Lido"
+  topic="Upgrading Ethereum, Upgrading Lido"
+%}
+
+{% include partials/components/schedule-slot.html
+  time="6:15pm - 6:35pm"
+  speaker="Oisín Kyne"
+  affiliation="Obol"
+  topic="Programmable staking: Smart contract based withdrawal credentials"
+%}
+
+{% include partials/components/schedule-slot.html
+  time="6:35pm - 6:55pm"
+  speaker="Leo"
+  affiliation="MigaLabs"
+  topic="Analysing Validators Performance in the Present and in the Future"
+%}
+
+{% include partials/components/schedule-slot.html
   time="6:55pm - 7:10pm"
-  time="TBA"
   topic="Ethereum Staking Quiz"
 %}
 
 {% include partials/components/schedule-slot.html
   time="7:10pm - 10:00pm"
-  time="TBA"
   topic="Dinner, open bar, museum exhibit"
 %}
-
-
-
-
 
 
 
