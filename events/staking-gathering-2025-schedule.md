@@ -56,7 +56,7 @@ buttons:
 
 {% include partials/components/schedule-slot.html
   time="10:40am - 11:00am"
-  speaker="Alon"
+  speaker="Alon Muroch"
   affiliation="SSV"
   topic="Compose Network: A New Validator Revenue Opportunity"
 %}
@@ -81,13 +81,13 @@ buttons:
 %}
 
 {% include partials/components/schedule-slot.html
-  time="11:55am - 12:15am"
+  time="11:55am - 12:15pm"
   speaker="TBD"
   affiliation="Aztec"
 %}
 
 {% include partials/components/schedule-slot.html
-  time="12:15am - 1:10am"
+  time="12:15pm - 1:10pm"
   topic="Lunch"
 %}
 
@@ -110,7 +110,7 @@ buttons:
 
 {% include partials/components/schedule-slot.html
   time="1:50pm - 2:10pm"
-  speaker="Francesco"
+  speaker="Francesco D'Amato"
   affiliation="EF Protocol Architecture"
   topic="Single Slot Finality and the Future of Staking"
 %}
@@ -124,7 +124,7 @@ buttons:
 
 {% include partials/components/schedule-slot.html
   time="2:30pm - 2:50pm"
-  speaker="Luca"
+  speaker="Luca Winter"
   affiliation="Vero / Serenita"
   topic="Improving Ethereum resilience with multi-node validator setups"
 %}
@@ -182,7 +182,7 @@ buttons:
 
 {% include partials/components/schedule-slot.html
   time="5:35pm - 5:55pm"
-  speaker="Parithosh Jayanthi (ethPandaOps), Barnabas (EF)"
+  speaker="Parithosh Jayanthi (ethPandaOps), Barnabas Busa (EF)"
   topic="ethPandaOps Fusaka Testing Deep Dive"
 %}
 
