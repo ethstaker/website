@@ -82,8 +82,9 @@ buttons:
 
 {% include partials/components/schedule-slot.html
   time="11:55am - 12:15pm"
-  speaker="TBD"
+  speaker="Joe Andrews"
   affiliation="Aztec"
+  topic="Decentralization or Delegation? Rethinking How We Build Validator Ecosystems"
 %}
 
 {% include partials/components/schedule-slot.html
@@ -139,7 +140,7 @@ buttons:
   time="3:05pm - 3:30pm"
   speaker="Danny Ryan (Etherealize)"
   affiliation="Interviewed by Thorsten Behrens"
-  topic="Fireside Chat"
+  topic="Turns Out It's Complicated"
 %}
 
 {% include partials/components/schedule-slot.html

@@ -39,7 +39,10 @@
             {%- if include.topic == "" -%}
               <span>Topic TBA</span>
             {%- else -%}
-              <span>“{{include.topic | titlecase}}”</span>
+              <span>{{include.topic | titlecase}}</span>
+              {%- comment -%}
+                <span>“{{include.topic | titlecase}}”</span>
+              {%- endcomment -%}
             {%- endif -%}
           {%- endif -%}
         {%- else -%}
