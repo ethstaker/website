@@ -1,3 +1,9 @@
+{%- assign marketshare = "24" -%}
+{%- if site.environment == "production" -%}
+  {%- assign marketshare = "" | getmarketshare -%}
+{%- endif -%}
+
+
 <!-- Decentralized Staking Pool -->
 <section id="decentralized-staking-pool" class="">
   <div class="container my-3 my-md-0 my-lg-4 p-4 py-md-5">
@@ -141,7 +147,7 @@
             <h5 class="card-title">Lido</h5>
             <span class="badge rounded-pill text-bg-secondary mb-2 opacity-75 invisible">Not Recommended</span>
             <div class="card-text mb-auto mt-2">
-              <p>Lido currently controls ~{{"" | getmarketshare}}% of the network. This large stake is unhealthy to Ethereum and EthStaker discourages new stakers from using them.</p>
+              <p>Lido currently controls ~{{marketshare}}% of the network. This large stake is unhealthy to Ethereum and EthStaker discourages new stakers from using them.</p>
               <ul>
                 <li><a href="https://lido.fi/">Official website</a></li>
                 <li><a href="https://docs.lido.fi/">Guides</a></li>
