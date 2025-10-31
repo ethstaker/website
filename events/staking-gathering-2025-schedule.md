@@ -3,7 +3,7 @@ layout: markdown
 title: Staking Gathering Schedule
 permalink: events/staking-gathering-2025/schedule
 subheader: 'Malba, Buenos Aires - November 18, 2025'
-note: Timeslots are being finalized
+# note: Timeslots are being finalized
 buttons:
 - link: 'https://tickets.ethstaker.org/ethstaker/devconnect/'
   text: Buy Tickets
