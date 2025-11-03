@@ -106,7 +106,7 @@ buttons:
   time="1:30pm - 1:50pm"
   speaker="Ladislaus von Daniels"
   affiliation="Ethereum Foundation"
-  topic="Validating with zkExecution clients"
+  topic="Validating with an zkAttester Client"
 %}
 
 {% include partials/components/schedule-slot.html
