@@ -76,7 +76,7 @@ buttons:
 
 {% include partials/components/schedule-slot.html
   time="11:35am - 11:55am"
-  speaker="Paladin + Dave"
+  speaker="Stephen Pack + Dave"
   affiliation="Rocksolid"
   topic="How DeFi vaults are helping Rocket Pool grow"
 %}
@@ -199,7 +199,7 @@ buttons:
   time="6:15pm - 6:35pm"
   speaker="Oisín Kyne"
   affiliation="Obol"
-  topic="Programmable staking: Smart contract based withdrawal credentials"
+  topic="Powering Ethereum: Self Sovereignty in a world of service providers"
 %}
 
 {% include partials/components/schedule-slot.html
