@@ -70,7 +70,8 @@ buttons:
 {% include partials/components/schedule-slot.html
   time="11:15am - 11:35am"
   speaker="dionysuz.eth"
-  topic="On maintaining a healthy fork choice"
+  affiliation="Kittynode"
+  topic="What Runs Ethereum"
 %}
 
 {% include partials/components/schedule-slot.html
