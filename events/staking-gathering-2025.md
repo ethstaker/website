@@ -46,7 +46,7 @@ Whether you're operating one validator at home or coordinating thousands across 
 - A world-class venue at the heart of Buenos Aires
 - Time in the evening to view Malba’s museum exhibits
 
-
+<!-- 
 ### Speak at the Gathering
 
 We’re looking for clear, thoughtful voices from across the staking community. If you’re working on validator operations, client development, security, dashboards, economics, UX, or related areas, we’d love to hear your perspective.
@@ -58,7 +58,7 @@ Speaker applications are already open! All talks will be selected with the goal 
   text="Speaker Application"
   size="md"
 %}
-
+ -->
 
 ### Schedule
 
