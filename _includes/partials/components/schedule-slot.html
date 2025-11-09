@@ -9,10 +9,13 @@
   .schedule-entry:last-child {
     border-bottom: none;
   }
+  .schedule-entry img {
+    height: 2.35rem;
+  }
   .schedule-entry .time {
     font-weight: 600;
-    /*color: #0d6efd;*/
-    min-width: 140px;
+    /*min-width: 140px;*/
+    min-width: 205px;
   }
   @media (max-width: 576px) {
     .schedule-entry .time {
@@ -20,17 +23,36 @@
       margin-bottom: 0.25rem;
     }
   }
+  .schedule-entry .globe svg {
+    margin-top: -3px;
+    margin-right: 5px;
+  }
 </style>
 
 {%- if include.hide != "true" -%}
   <div class="schedule-entry">
     <div class="row">
       {%- if include.time != "TBA" -%}
-        <div class="col-12 col-md-3 time">{{include.time}}</div>
+        <div class="col-12 col-md-3 time">
+          <a class="globe img-link" href="https://www.timeanddate.com/worldclock/converter.html?iso={{include.iso}}&p1=51">{{site.data.icons.globe}}</a>
+          {{include.time}}
+        </div>
       {%- endif -%}
-      <div class="col">
+      <div class="col col-3 col-sm-2 col-xxl-1">
         {%- if include.speaker -%}
-          <strong>{{include.speaker}} </strong>
+          {%- if include.img and include.link -%}
+            <a class="img-link" href="{{include.link}}" target="_blank">
+              <img class="rounded-circle" src="/assets/img/devconnect-2025/speakers/{{include.img}}">
+            </a>
+          {%- elsif include.img -%}
+            <img class="rounded-circle" src="/assets/img/devconnect-2025/speakers/{{include.img}}">
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+      <div class="col details">
+        {%- if include.speaker -%}
+          <strong>
+          {{include.speaker}} </strong>
           {%- if include.affiliation -%}
             — <em>{{include.affiliation}}</em>
           {%- endif -%}

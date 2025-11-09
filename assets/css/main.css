@@ -296,6 +296,7 @@ table tr td {
 .steward .new-tab span.icon,
 #sponsors .new-tab span.icon,
 .documenter .new-tab span.icon,
+.img-link span.icon,
 img .new-tab span.icon {
   display: none;
 }
