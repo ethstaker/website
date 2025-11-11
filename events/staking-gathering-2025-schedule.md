@@ -86,7 +86,7 @@ buttons:
   link="https://x.com/dionysuzx"
   img="dionysuz.webp"
   affiliation="Kittynode"
-  topic="What Runs Ethereum"
+  topic="Making Ethereum Visible"
 %}
 
 {% include partials/components/schedule-slot.html
