@@ -19,6 +19,16 @@ subheader: An event for the Ethereum staking community
 
 **Location**: [Malba \| Museo de Arte Latinoamericano de Buenos Aires](https://maps.app.goo.gl/KaUgKTKGdR1tdgMA8)
 
+
+{% include partials/components/button.html
+  link="https://youtube.com/live/jfgTv82w7Dk"
+  text="Watch Livestream"
+  size="lg"
+  align="center"
+  display="block"
+%}
+
+
 Join us in Buenos Aires for the 2025 edition of the Staking Gathering! This event is dedicated entirely to Ethereum staking. It’s for solo stakers, home stakers, protocol teams, researchers, infrastructure providers, institutional participants, and anyone involved in keeping Ethereum’s staking ecosystem decentralized and secure.
 
 The day will feature talks, panels, workshops, and networking covering everything from validator clients and home staking to liquid staking, DVT, MEV, user experience, and the economics of staking. We aim for real discussions with people building, running, and improving the systems that make staking work.
