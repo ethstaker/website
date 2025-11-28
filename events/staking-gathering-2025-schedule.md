@@ -92,7 +92,7 @@ buttons:
 {% include partials/components/schedule-slot.html
   time="11:35am - 11:55am"
   iso="20251118T143500"
-  speaker="Stephen Pack + Dave"
+  speaker="Steven Pack + Darren Langley"
   link="https://x.com/paladin_eth"
   img="stevenpack.webp"
   affiliation="Rocksolid"
