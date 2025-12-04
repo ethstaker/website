@@ -2,6 +2,7 @@
 layout: markdown
 title: Staking Gathering Speaker Application
 permalink: /forms/staking-gathering-speaker-application-2025
+redirect_to: /
 ---
 
 

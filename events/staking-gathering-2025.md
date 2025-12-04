@@ -3,6 +3,7 @@ layout: markdown
 title: Staking Gathering at Devconnect Buenos Aires
 permalink: events/staking-gathering-2025
 subheader: An event for the Ethereum staking community
+redirect_to: /#staking-gathering
 
 # buttons:
 # - link: '#for-attendees'

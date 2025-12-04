@@ -297,7 +297,8 @@ table tr td {
 #sponsors .new-tab span.icon,
 .documenter .new-tab span.icon,
 .img-link span.icon,
-img .new-tab span.icon {
+img .new-tab span.icon,
+.no-new-tab-icon span.icon {
   display: none;
 }
 
