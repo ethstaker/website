@@ -13,17 +13,20 @@
 # Entries are shown in order listed
 - name: Koinly
   link: https://koinly.io/
-  support: USA, UK, Sweden, Norway, Switzerland, Finland, Canada, Australia, France
-  support_url: https://help.koinly.io/en/articles/3663366-which-tax-reports-can-koinly-generate
+  # support: USA, UK, Sweden, Norway, Switzerland, Finland, Canada, Australia, France
+  support: Over 100 countries including Australia, Belgium, Brazil, Canada, Czech Republic, Denmark, Estonia, Finland, France, Germany, Iceland, India, Ireland, Japan, Lichtenstein, Luxembourg, Malta, Mexico, Netherlands, New Zealand, Norway, Poland, Singapore, South Africa, South Korea, Spain, Sweden, Switzerland, UK, USA, Ukraine
+  support_url: https://support.koinly.io/en/articles/9489962-which-countries-does-koinly-calculate-taxes-for
 - name: CoinTracker
   link: https://www.cointracker.io/
-  support: USA, Canada, UK, India, Australia
-  support_url: https://support.cointracker.io/hc/en-us/articles/5293978329873-What-countries-does-CoinTracker-calculate-taxes-for-
-- name: CryptoTaxCalculator
-  link: https://cryptotaxcalculator.io/
-  support: Canada, USA, Australia, Japan, New Zealand, Singapore, Austria, Belgium, Germany, Finland, France, Greece, Ireland, Italy, Netherlands, Norway, Portugal, Spain, Sweden, Switzerland, UK, South Africa
-  support_url: https://cryptotaxcalculator.io/
+  # support: USA, Canada, UK, India, Australia
+  support: Over 100 countries including Australia, Canada, Germany, Italy, Spain, UK, USA
+  support_url: https://support.cointracker.io/hc/en-us/articles/5293978329873-Countries-supported-by-CoinTracker
+- name: Summ
+  link: https://summ.com/at
+  # support: Canada, USA, Australia, Japan, New Zealand, Singapore, Austria, Belgium, Germany, Finland, France, Greece, Ireland, Italy, Netherlands, Norway, Portugal, Spain, Sweden, Switzerland, UK, South Africa
+  support: Over 100 countries including Australia, Austria, Belgium, Canada, Finland, France, Germany, Greece, Ireland, Italy, Japan, Netherlands, New Zealand, Norway, Portugal, Singapore, South Africa, Spain, Sweden, Switzerland, United Kingdom, United States
+  support_url: https://summ.com/nl/guides/crypto-tax-guides-by-country
 - name: CoinLedger
   link: https://coinledger.io/
-  support: Australia, France, Japan, Sweden, Austria, Germany, New Zealand, Switzerland, Canada, India, South Africa, UK, Denmark, Ireland, Spain, USA
+  support:  Australia, Austria, Canada, Denmark, France, Germany, India, Ireland, Japan, New Zealand, South Africa, Spain, Swede, Switzerland, United Kingdom, United States
   support_url: https://coinledger.io/sitemap
