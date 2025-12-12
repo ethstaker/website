@@ -2,6 +2,19 @@
   #software .card {
     max-width: 30rem;
   }
+  #software .recommended .badge {
+    background-color: var(--gold-4);
+    font-size: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: -2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #software .card.recommended {
+    border:  1px solid var(--gold-4) !important;
+  }
   #software .card img {
     aspect-ratio: 16 / 9;
     object-fit: cover;
@@ -21,9 +34,16 @@
     <div class="row row-cols-1 row-cols-md-1 row-cols-xl-3 aos-up">
       {%- for software in site.data.staking-software -%}
         {%- if software.title and software.link -%}
+          {%- assign recommended = "" -%}
+          {%- if software.recommended -%}
+            {%- assign recommended = "recommended" -%}
+          {%- endif -%}
           <div class="col order-0 order-xl-1 d-flex justify-content-center align-items-stretch mb-3">
-            <div class="card shadow border-0 w-100">
+            <div class="card {{recommended}} shadow border-0 w-100">
               <div class="card-body d-flex align-items-start flex-column">
+                {%- if software.recommended -%}
+                  <span class="badge">Recommended</span>
+                {%- endif -%}
                 <h5 class="card-title">{{software.title}}</h5>
                 <img src="{{software.img}}" loading="lazy" class="card-img-top mb-2" alt="...">
                 <div class="card-text mb-auto">

@@ -19,6 +19,7 @@
   # link: "/solo-staking-guides/eth-docker"
   link: "https://ethdocker.com/"
   creator: Thorsten Behrens
+  recommended: true
 - title: EthPillar
   img: "/assets/img/staking-software/ethpillar.png"
   description: one-liner setup tool and node management TUI. Free. Open source. Public goods for Ethereum. ARM64 and AMD64 support.
