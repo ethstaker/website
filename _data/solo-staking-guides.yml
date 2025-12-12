@@ -13,23 +13,12 @@
 
 
 # Entries are shown in the order listed, put recommended at the top
-- title: Eth Wizard
-  img: "/assets/img/solo-staking-guides/eth-wizard.png"
-  description: Build your own hardware and use a combination of GUI applications and copy/paste CLI commands.
-  # link: "/solo-staking-guides/eth-wizard"
-  link: "https://github.com/stake-house/eth-wizard"
-  recommended: true
 - title: Eth Docker
   img: "/assets/img/solo-staking-guides/eth-docker.png"
   description: Build your own hardware and copy/paste CLI commands.
   # link: "/solo-staking-guides/eth-docker"
   link: "https://ethdocker.com/"
-# not mature enough
-# - title: Instant Validator
-#   img: "/assets/img/solo-staking-guides/instant-validator.png"
-#   description: Build your own hardware and use a combination of GUI applications and copy/paste CLI commands.
-#   # link: "/solo-staking-guides/instant-validator"
-#   link: "https://github.com/accidental-green/validator-install"
+  recommended: true
 - title: DappNode
   img: "/assets/img/solo-staking-guides/dappnode.png"
   description: Order plug-and-play hardware that comes with staking software pre-installed.
@@ -58,3 +47,15 @@
   description: Order plug-and-play hardware that comes with staking software pre-installed.
   # link: "/solo-staking-guides/avado"
   link: "https://docs.ava.do/getting-started/"
+# deprecated
+# - title: Eth Wizard
+#   img: "/assets/img/solo-staking-guides/eth-wizard.png"
+#   description: Build your own hardware and use a combination of GUI applications and copy/paste CLI commands.
+#   # link: "/solo-staking-guides/eth-wizard"
+#   link: "https://github.com/stake-house/eth-wizard"
+# not mature enough
+# - title: Instant Validator
+#   img: "/assets/img/solo-staking-guides/instant-validator.png"
+#   description: Build your own hardware and use a combination of GUI applications and copy/paste CLI commands.
+#   # link: "/solo-staking-guides/instant-validator"
+#   link: "https://github.com/accidental-green/validator-install"

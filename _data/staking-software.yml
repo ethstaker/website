@@ -13,18 +13,13 @@
 
 
 # Entries are shown in the order listed
-- title: Eth Wizard
-  img: "/assets/img/staking-software/eth-wizard.png"
-  description: An installation wizard to setup, configure, and maintain your validator.
-  # link: "/solo-staking-guides/eth-wizard"
-  link: "https://github.com/stake-house/eth-wizard"
-  creator: Rémy Roy
 - title: Eth Docker
   img: "/assets/img/staking-software/eth-docker.png"
   description: Eth Docker makes installing and maintaining your validator simpler with the use of Docker.
   # link: "/solo-staking-guides/eth-docker"
   link: "https://ethdocker.com/"
   creator: Thorsten Behrens
+  recommended: true
 - title: EthPillar
   img: "/assets/img/staking-software/ethpillar.png"
   description: one-liner setup tool and node management TUI. Free. Open source. Public goods for Ethereum. ARM64 and AMD64 support.
@@ -40,6 +35,23 @@
   description: A CLI program to securely generate keys for staking deposits.
   link: "https://github.com/ethereum/staking-deposit-cli"
   creator: Ethereum
+- title: Nethermind Sedge
+  img: "/assets/img/staking-software/sedge.png"
+  description: Sedge makes installing and maintaining your validator simpler with the use of Docker.
+  link: "https://docs.sedge.nethermind.io/docs/intro"
+  creator: Nethermind
+- title: Stereum
+  img: "/assets/img/staking-software/stereum.png"
+  description: A GUI app for Ethereum node and validator installation, setup, and management.
+  link: "https://stereum.net/"
+  creator: Rocklogic
+# deprecated
+# - title: Eth Wizard
+#   img: "/assets/img/staking-software/eth-wizard.png"
+#   description: An installation wizard to setup, configure, and maintain your validator.
+#   # link: "/solo-staking-guides/eth-wizard"
+#   link: "https://github.com/stake-house/eth-wizard"
+#   creator: Rémy Roy
 # not mature enough
 # - title: Instant Validator
 #   img: "/assets/img/staking-software/instant-validator.png"
@@ -61,13 +73,3 @@
 #   # link: "/solo-staking-guides/validator-updater"
 #   link: "https://github.com/accidental-green/validator-update"
 #   creator: accidental-green
-- title: Nethermind Sedge
-  img: "/assets/img/staking-software/sedge.png"
-  description: Sedge makes installing and maintaining your validator simpler with the use of Docker.
-  link: "https://docs.sedge.nethermind.io/docs/intro"
-  creator: Nethermind
-- title: Stereum
-  img: "/assets/img/staking-software/stereum.png"
-  description: A GUI app for Ethereum node and validator installation, setup, and management.
-  link: "https://stereum.net/"
-  creator: Rocklogic

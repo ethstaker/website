@@ -3,6 +3,7 @@ layout: markdown
 title: Seeking Employment
 permalink: /jobs/seeking-employment-listings
 note: Listing are not endorsements
+redirect_to: /
 
 buttons:
 - link: /jobs/job-listings

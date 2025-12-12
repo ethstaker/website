@@ -20,8 +20,15 @@ Providing Airdrops to Solo and Home stakers is an excellent way to engage the di
 
 
 ### Solo Staker Lists
-- The [GLCStaked](https://github.com/GLCNI/ETH-Solo-Validator-Addresses) list is generally regarded as the more comprehensive solo stakers list.
-- The [rated.network](https://github.com/rated-network/solo-stakers/tree/main) list only comprehensively includes validator with indices below 500,000, but has been used for the StarkNet & Omni airdrops. You *will* get solo stakers asking why they've been left out because the list's methodology is more discerning and misses some solo stakers.
+- [StakeCat Solo Staker List](https://github.com/Stake-Cat/Solo-Stakers)
+  - There are 2 different lists: one that's high confidence and one that's more inclusive
+- [Rated Solo Staker List](https://github.com/eth-educators/solo-stakers/blob/fb427a7eaa5d5f95bc8cecefd3afcd8b7c6a750f/solos_list/solo_stakers_v2.csv)
+  - Up to index 1,500,000
+  - The methodology for this list is more exclusive so you *will* get solo stakers asking why they've been left out
+- [Stakers Union Verified Stakers](https://www.stakersunion.com/list)
+  - CSV download at bottom of list
+- [Ethereum Staker POAP Holders](https://collections.poap.xyz/collections/ethereum-node-operators/4972?tab=collectors)
+
 
 
 ### Do's
