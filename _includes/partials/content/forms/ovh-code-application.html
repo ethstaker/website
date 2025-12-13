@@ -1,0 +1,168 @@
+{%- assign context = "ovh" -%}
+{%- assign signeris_link = "https://signer.is/sign/JTdCJTIycmVxdWVzdGVkX21lc3NhZ2UlMjIlM0ElMjJJJTIwYW0lMjBwYXJ0JTIwb2YlMjB0aGUlMjBFdGhTdGFrZXIlMjBjb21tdW5pdHklMjBhbmQlMjByZXF1ZXN0aW5nJTIwYW4lMjBPVkhjbG91ZCUyMGRpc2NvdW50JTIwY29kZSUyMiU3RA==" -%}
+
+<section>
+  <div class="container">
+    <div class="row mt-4 aos-up">
+      <div id="{{context}}Form" class="border-top mt-2 pt-4">
+        <div class="w-100 mb-4">
+          <div class="text-danger">* Required fields</div>
+        </div>
+
+        <!-- Full Description -->
+        <div class="w-100 mb-3">
+          <label for="{{context}}SignedMsg" class="form-label">
+            <span class="text-danger">*</span>
+            Signed Message
+          </label>
+          <div class="mb-2"><small>Visit <a href="{{signeris_link}}" target="_blank">Signer.is</a> to sign the provided message using a wallet holding an EthStaker POAP. Copy the resulting shareable link and paste it here.</small></div>
+          <input type="url" class="form-control form-field" id="{{context}}SignedMsg" required placeholder="https://signer.is/verify/..." onchange="validate(this)">
+        </div>
+
+        <!-- Email -->
+        <div class="w-100 mb-3">
+          <label for="{{context}}Email" class="form-label">
+            <span class="text-danger">*</span>
+            Email to Receive Discount Code
+          </label>
+          <input type="email" class="form-control form-field" id="{{context}}Email" placeholder="name@example.com" required onchange="validate(this)">
+        </div>
+
+        <!-- Residency -->
+        <div class="w-100 mb-3">
+          <label for="{{context}}Residency" class="form-label mb-1">
+            <span class="text-danger">*</span>
+            Are you a US resident? (Different set of discount codes for US residents)
+          </label>
+          <div id="{{context}}Residency" class="form-field p-2" type="radios" required onchange="validate(this)">
+            <div class="form-check ms-1">
+              <input class="form-check-input {{context}}Residency" type="radio" name="{{context}}Residency" value="Yes"  id="{{context}}Residency1">
+              <label class="form-check-label" for="{{context}}Residency1">
+                Yes
+              </label>
+            </div>
+
+            <div class="form-check ms-1">
+              <input class="form-check-input {{context}}Residency" type="radio" name="{{context}}Residency" value="No" id="{{context}}Residency2">
+              <label class="form-check-label" for="{{context}}Residency2">
+                No
+              </label>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Error Message -->
+        <div class="w-100 mb-3">
+          <p id="{{context}}ErrorMessage" class="text-danger invisible fs-6">* Please fill out all required fields</p>
+        </div>
+
+        <!-- Submit -->
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
+          <button id="{{context}}SubmitButton" class="btn btn-dark" type="button" onclick="submitApplication()">Submit</button>
+        </div>
+      </div>
+
+      <div id="{{context}}FormSubmitted" class="d-none w-100 text-center border-top mb-3 pt-3">
+        <div>✅ Thank you for your submission. If your request qualifies you will receive and email with the codes within a week.</div>
+        <a class="btn btn-sm btn-outline-dark mt-3" onclick="showForm()">View Submissiom</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<script type="text/javascript">
+  function submitApplication() {
+    let formValid = validate();
+    if (formValid) {
+      // Hide error message for empty required fields
+      document.getElementById("{{context}}ErrorMessage").classList.add("invisible");
+      // Submit data
+      sendData();
+      // Display submission success message
+      document.getElementById("{{context}}Form").classList.add("d-none");
+      document.getElementById("{{context}}FormSubmitted").classList.remove("d-none");
+      // Scroll up to submission success message
+      // document.getElementById("speakerFormSubmitted").scrollIntoView();
+      scrollToElement("{{context}}FormSubmitted", -200);
+    } else {
+      // Show error message for empty required fields
+      document.getElementById("{{context}}ErrorMessage").classList.remove("invisible");
+    }
+  }
+
+  function showForm() {
+    document.getElementById("{{context}}Form").classList.remove("d-none");
+    document.getElementById("{{context}}FormSubmitted").classList.add("d-none");
+  }
+
+  // Validate form and inputs
+  function validate(input=false) {
+    const inputs = input ? [input] : document.querySelectorAll('.form-field');
+    let formValid = true;
+    inputs.forEach(el => {
+      let type = el.getAttribute('type');
+      if (el.hasAttribute('required')) {
+        let inputValid = false;
+        // URL
+        if (type == "url") {
+          el.value = el.value.trim();
+          let url_base = "https://signer.is/verify/";
+          if (el.value.includes(url_base) && el.value != url_base) {
+            inputValid = true;
+          } else {
+            formValid = false;
+          }
+        // Email
+        } else if (type == "email") {
+          el.value = el.value.replaceAll(" ", "");
+          if (el.value == "") {
+            formValid = false;
+          } else if (/^\S+@\S+\.\S+$/.test(el.value)) {
+            inputValid = true;
+          }
+        // Radio Group
+        } else if (type == "radios") {
+          let checked = document.querySelector(`#${el.id} input[type=radio]:checked`);
+          if (!checked) {
+            formValid = false;
+          } else {
+            inputValid = true;
+          }
+          el.classList.add("form-control");
+        }
+        if (inputValid) {
+          el.classList.remove("is-invalid");
+          el.classList.add("is-valid");
+        } else {
+          el.classList.add("is-invalid");
+          el.classList.remove("is-valid");
+        }
+      }
+    });
+    return formValid;
+  }
+
+  // Submit data to google forms
+  function sendData() {
+    const url = "/.netlify/functions/ovh-code-request";
+
+    const payload = {
+      signedMsg: document.getElementById("{{context}}SignedMsg").value,
+      email: document.getElementById("{{context}}Email").value,
+      residency: document.querySelector('#{{context}}Residency input[type=radio]:checked').value
+    };
+
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.error(err));
+  }
+
+</script>
