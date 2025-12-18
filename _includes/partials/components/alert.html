@@ -1,0 +1,21 @@
+{%- comment -%}
+<!-- 
+type:    "info" (default, blue), "warning" (yellow), "danger" (red), "success" (green)
+text:   alert message
+
+Usage:
+{% include partials/components/alert.html
+  type="warning"
+  text="This is an alert element."
+%}
+-->
+{%- endcomment -%}
+
+{%- assign type = "info" -%}
+{%- if include.type -%}
+  {%- assign type = include.type -%}
+{%- endif -%}
+
+<div class="alert alert-{{type}} p-2" role="alert">
+  {{include.text}}
+</div>

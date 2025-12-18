@@ -23,4 +23,10 @@ If you're considering using a cloud provider for a testnet, an experiment, your 
 There are discount codes available to the EthStaker community. Fill out the form below to request a code. You must have an EthStaker POAP to qualify. Discount codes work worldwide.
 
 
+{% include partials/components/alert.html
+  type="warning"
+  text="Discount codes are only valid for new OVH accounts."
+%}
+
+
 {% include partials/content/forms/ovh-code-application.html %}

@@ -11,10 +11,10 @@ export const handler = async (event) => {
       return { statusCode: 400, body: "Invalid JSON" };
     }
 
-    const { signedMsg, email, residency } = body;
+    const { signedMsg, email, residency, plan } = body;
 
     // check missing fields
-    if (!signedMsg || !email || !residency) {
+    if (!signedMsg || !email || !residency || !plan) {
       console.log(`Missing fields: ${body}`);
       return { statusCode: 400, body: "Missing required fields" };
     }
@@ -54,7 +54,8 @@ export const handler = async (event) => {
     const message = `📬 New OVH Code Request | [Signer.is ↗](${signedMsg})
 Address: [${decoded["claimed_signatory"]}](https://collectors.poap.xyz/scan/${decoded["claimed_signatory"]}?search=ethstaker)
 Email: ${email}
-US Resident: ${residency}`;
+US Resident: ${residency}
+Type: ${plan}`;
 
     try {
       await fetch(webhook, {
