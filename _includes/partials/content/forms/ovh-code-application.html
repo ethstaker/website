@@ -51,6 +51,29 @@
           </div>
         </div>
 
+        <!-- Plan -->
+        <div class="w-100 mb-3">
+          <label for="{{context}}Plan" class="form-label mb-1">
+            <span class="text-danger">*</span>
+            Which discount would you like?
+          </label>
+          <div id="{{context}}Plan" class="form-field p-2" type="radios" required onchange="validate(this)">
+            <div class="form-check ms-1">
+              <input class="form-check-input {{context}}Plan" type="radio" name="{{context}}Plan" value="12 months @ 8% discount"  id="{{context}}Plan1">
+              <label class="form-check-label" for="{{context}}Plan1">
+                12 months @ 8% discount
+              </label>
+            </div>
+
+            <div class="form-check ms-1">
+              <input class="form-check-input {{context}}Plan" type="radio" name="{{context}}Plan" value="24 months @ 15% discount" id="{{context}}Plan2">
+              <label class="form-check-label" for="{{context}}Plan2">
+                24 months @ 15% discount
+              </label>
+            </div>
+          </div>
+        </div>
+
 
         <!-- Error Message -->
         <div class="w-100 mb-3">
@@ -152,7 +175,8 @@
     const payload = {
       signedMsg: document.getElementById("{{context}}SignedMsg").value,
       email: document.getElementById("{{context}}Email").value,
-      residency: document.querySelector('#{{context}}Residency input[type=radio]:checked').value
+      residency: document.querySelector('#{{context}}Residency input[type=radio]:checked').value,
+      plan: document.querySelector('#{{context}}Plan input[type=radio]:checked').value
     };
 
     fetch(url, {
