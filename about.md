@@ -5,6 +5,8 @@ permalink: /about
 subheader: '*"Welcoming first, knowledgable second"*'
 
 buttons:
+- link: '#core-areas'
+  text: Core Areas
 - link: '#stewards'
   text: View Stewards
 ---
@@ -15,8 +17,15 @@ EthStaker’s motto is “welcoming first, knowledgeable second”. Everybody ha
 
 ![](https://imgs.xkcd.com/comics/ten_thousand_2x.png)
 
-EthStaker’s principle goal is to maximize the decentralization of the Ethereum network. This means encouraging people to solo stake when possible & to stake with decentralized services when solo staking is not possible, helping protocols to develop in ways that incentivize a healthy Beaconchain, and supporting initiatives that maximize geographic, demographic, & technological decentralization.
+EthStaker’s principal goal is to maximize the decentralization of the Ethereum network. This means encouraging people to solo stake when possible & to stake with decentralized services when solo staking is not possible, helping protocols to develop in ways that incentivize a healthy Beaconchain, and supporting initiatives that maximize geographic, demographic, & technological decentralization.
 
+## Core Areas {#core-areas}
+
+- Support and education
+- Public good open source tools and resources
+- Live and virtual events
+- Protocol advocacy
+- Surveys
 
 ## Stewards
 
