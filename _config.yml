@@ -47,26 +47,20 @@ enable_nav: true
 enable_nav_collapse: true # doesn't work at the moment
 
 # Notification Bar
-enable_notification: false
-notification_msg_id: 2 # must increment when creating a new message
-notification_msg: <a href="https://notes.ethereum.org/@djrtwo/risks-of-lsd" target="_blank">A PSA for liquid stakers by Danny Ryan</a>
-notification_expiration: 3000000000 # epoch time in seconds
+enable_notification: true
+notification_msg_id: 3 # must increment when creating a new message
+notification_msg: <a href="https://ethstaker.org/forms/staking-landscape-survey-2026" target="_blank">Take the 2026 Staking Landscape Survey!</a>
+notification_expiration: 1779555600 # epoch time in seconds
 
 # Toast
-enable_toast: true
-toast_msg_id: 8 # must increment when creating a new message
-# Gitcoin
-toast_title: EthStaker’s Gitcoin grant is live!
-toast_msg: This round runs until November 30th. Please consider donating - EthStaker is grant-funded and all funds go towards initiatives that help decentralize staking. # Best when under 200 characters
-toast_link: https://explorer.gitcoin.co/#/round/137/0xa1d52f9b5339792651861329a046dd912761e9a9/0xa1d52f9b5339792651861329a046dd912761e9a9-1 # Optional, leave blank to omit
-toast_link_text: Donate
-# Octant
-# toast_title: EthStaker’s Octant voting is live!
-# toast_msg: This round runs through November 2nd. Please consider allocating your votes - EthStaker is grant-funded and all funds go towards initiatives that help decentralize staking. # Best when under 200 characters
-# toast_link: https://octant.app/ # Optional, leave blank to omit
-# toast_link_text: Vote
-# November 29, 23:59:59 GMT+0
-toast_expiration: 1701302399 # epoch time in seconds
+enable_toast: false
+toast_msg_id: 9 # must increment when creating a new message
+toast_title: Staking Landscape Survey 2026!
+toast_msg: Help us understand the staking landscape! The survey (5 minutes) and is applicable to any type of staker and even non-stakers.
+toast_link: https://ethstaker.org/forms/staking-landscape-survey-2026 # Optional, leave blank to omit
+toast_link_text: View Survey
+# May 23, 5PM GMT+0
+toast_expiration: 1779555600 # epoch time in seconds
 
 # Feedback Toast
 enable_feedback_toast: false
