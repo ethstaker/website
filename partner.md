@@ -36,7 +36,6 @@ If you have ideas not outlined here, contact <a href="mailto:team@ethstaker.org"
 #### Donate
 
 - We allow for donations in custom amounts or frequency toward our mission of supporting the health and decentralization of the Ethereum staking ecosystem.
-- EthStaker is a 501(c)(4) nonprofit, so contributions are generally not tax-deductible as charitable donations. Please consult your tax advisor about your specific situation.
 - Donations signal support. They do not buy influence or anything of value. There is no token. EthStaker is independent and stewarded by the community.
 - More info: [ethstaker.org/donate](/donate)
 
