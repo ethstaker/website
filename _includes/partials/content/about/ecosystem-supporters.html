@@ -1,0 +1,64 @@
+{%- comment -%}
+<!-- 
+This data is pulled from _data/about/ecosystem-supporters.yml
+-->
+{%- endcomment -%}
+
+<style type="text/css">
+  .supporter {
+    width: 10.5rem;
+    border: none;
+  }
+  @media only screen and (max-width: 1399px) {
+    .supporter {
+      width: 12rem;
+    }
+  }
+  @media only screen and (max-width: 1199px) {
+    .supporter {
+      width: 14rem;
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    .supporter {
+      width: 13rem;
+    }
+  }
+  .supporter a {
+    width: 1.1rem;
+    margin: 0 0.35rem;
+    filter: grayscale(100%) brightness(0%);
+  }
+  .supporter a:first-child {
+    margin-left: 0;
+  }
+  .supporter a:last-child {
+    margin-right: 0;
+  }
+  .supporter svg {
+    height: 1.1rem;
+    width: 1.1rem;
+    opacity: 0.8;
+  }
+
+  .dark-mode .supporter a {
+    filter: contrast(0%) brightness(100%) sepia(50%) hue-rotate(175deg) !important;
+  }
+</style>
+
+
+<div class="row row-cols-auto justify-content-center pt-2">
+  {%- for supporter in site.data.ecosystem-supporters -%}
+    {%- if supporter.name -%}
+      <div class="col d-flex align-items-stretch mb-4">
+        <a class="no-new-tab-icon" href="{{supporter.link}}" target="_blank" title="{{supporter.name}}">
+          <div class="card supporter shadow">
+            <div class="p-3">
+                <img src="{{supporter.img}}" class="card-img-top m-0" alt="...">
+            </div>
+          </div>
+        </a>
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+</div>

@@ -1,0 +1,34 @@
+## name     = supporter's name (shown on hover)
+## img      = supporter image path (and compressed)
+## link     = supporter's website
+
+
+# Template to copy for new entries
+# - name: 
+#   link: 
+#   img: 
+
+
+# Entries are shown in the order listed
+- name: Ethereum Foundation
+  img: https://ethereum.org/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fef-logo-white.0xja7see48xp6.png&w=640&q=75
+  link: https://ethereum.foundation/
+- name: Ethereum Foundation
+  img: https://ethereum.org/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fef-logo-white.0xja7see48xp6.png&w=640&q=75
+  link: https://ethereum.foundation/
+- name: Ethereum Foundation
+  img: https://ethereum.org/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fef-logo-white.0xja7see48xp6.png&w=640&q=75
+  link: https://ethereum.foundation/
+- name: Ethereum Foundation
+  img: https://ethereum.org/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fef-logo-white.0xja7see48xp6.png&w=640&q=75
+  link: https://ethereum.foundation/
+- name: Ethereum Foundation
+  img: https://ethereum.org/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fef-logo-white.0xja7see48xp6.png&w=640&q=75
+  link: https://ethereum.foundation/
+- name: Ethereum Foundation
+  img: https://ethereum.org/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fef-logo-white.0xja7see48xp6.png&w=640&q=75
+  link: https://ethereum.foundation/
+- name: Ethereum Foundation
+  img: https://ethereum.org/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fef-logo-white.0xja7see48xp6.png&w=640&q=75
+  link: https://ethereum.foundation/
+

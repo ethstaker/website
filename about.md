@@ -8,7 +8,9 @@ buttons:
 - link: '#core-areas'
   text: Core Areas
 - link: '#stewards'
-  text: View Stewards
+  text: Stewards
+- link: '#ecosystem-supporters'
+  text: Ecosystem Supporters
 ---
 
 EthStaker is a 50,000+ person community made up of stakers. Stakers help support the decentralization and robustness of Ethereum by securing the proof-of-stake network with their capital and earn rewards in the process of doing so. EthStaker is committed to helping any interested person learn the fundamentals of staking and evaluate their best way to start participating. It provides guidance, education, troubleshooting support, resources and platforms for stakers and potential stakers to interact. EthStaker does not have its own protocol; it seeks to be a trustworthy community resource. For the community, by the community.
@@ -27,11 +29,19 @@ EthStaker’s principal goal is to maximize the decentralization of the Ethereum
 - Protocol advocacy
 - Surveys
 
-## Stewards
+## Stewards {#stewards}
 
 While EthStaker is a community organization, it's stewarded by the active members listed below. [View disclosures](/disclosures).
 
 {% include partials/content/about/stewards.html %}
+
+## Ecosystem Supporters {#ecosystem-supporters}
+
+The following ecosystem participants have given to the EthStaker nonprofit through direct contributions toward the mission to support the health and decentralization of the Ethereum staking ecosystem.
+
+{% include partials/content/about/ecosystem-supporters.html %}
+
+Read more about how to join this list at [ethstaker.org/partner](/partner) and [ethstaker.org/donate](/donate).
 
 
 {%- comment -%}
