@@ -105,6 +105,10 @@ details summary:after {
 details[open] summary:after {
   content: " (click to close)";
 }
+details.nocomment summary:after,
+details[open].nocomment summary:after {
+  content: "";
+}
 section li:not(:last-child) {
   margin-bottom: 0.25rem;
 }
