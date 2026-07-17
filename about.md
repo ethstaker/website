@@ -11,7 +11,7 @@ buttons:
   text: View Stewards
 ---
 
-EthStaker is a 50,000+ person community made up of stakers. Stakers help support the decentralization and robustness of Ethereum by securing the proof-of-stake network with their capital and earn rewards in the process of doing so. EthStaker is committed to helping any interested person learn the fundamentals of staking and evaluate their best way to start participating. It provides guidance, education, troubleshooting support, resources and platforms for stakers and potential stakers to interact. EthStaker does not have its own protocol; it seeks to be a trustworthy community resource. For the community, by the community.
+EthStaker is a community made up of stakers. Stakers help support the decentralization and robustness of Ethereum by securing the proof-of-stake network with their capital and earn rewards in the process of doing so. EthStaker is committed to helping any interested person learn the fundamentals of staking and evaluate their best way to start participating. It provides guidance, education, troubleshooting support, resources and platforms for stakers and potential stakers to interact. EthStaker does not have its own protocol; it seeks to be a trustworthy community resource. For the community, by the community.
 
 EthStaker’s motto is “welcoming first, knowledgeable second”. Everybody has a first time learning about something and we aim to support a positive experience for people interested and asking questions. 
 

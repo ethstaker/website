@@ -5,6 +5,6 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Referrer-Policy = "same-origin"
+    Referrer-Policy = "strict-origin-when-cross-origin"
     Strict-Transport-Security = "max-age=31536000"
     X-Frame-Options = "DENY"
