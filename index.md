@@ -7,8 +7,6 @@ layout: default
 
 {% include partials/components/divider-icons-projects.html %}
 
-{% include partials/content/index/staking-gathering-2025-post.html %}
-
 {% include partials/content/index/resources.html %}
 
 {% include partials/content/index/staking.html %}
@@ -18,3 +16,5 @@ layout: default
 {% include partials/components/divider-icons-electronics.html %}
 
 {% include partials/content/index/blog.html %}
+
+{% include partials/content/index/staking-gathering-2025-post.html %}
