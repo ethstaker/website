@@ -52,7 +52,7 @@ export const handler = async (event) => {
     }
 
     const message = `📬 New OVH Code Request | [Signer.is ↗](${signedMsg})
-Address: [${decoded["claimed_signatory"]}](https://collectors.poap.xyz/scan/${decoded["claimed_signatory"]}?search=ethstaker)
+Address: [${decoded["claimed_signatory"]}](https://opensea.io/${decoded["claimed_signatory"]}?searchQuery=ethstaker)
 Email: ${email}
 US Resident: ${residency}
 Type: ${plan}`;
