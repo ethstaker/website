@@ -1,43 +1,14 @@
 {%- comment -%}
-<!-- 
+<!--
 Add to config.yml:
 # Contribute/Edit CTA
 enable_contribute_cta: true
+
+Styles live in assets/css/main.css (#contributeCTA).
 -->
 {%- endcomment -%}
 
 {%- if site.enable_contribute_cta == true -%}
-<style type="text/css">
-  #contributeCTA {
-    position: fixed;
-    z-index: 100;
-    bottom: 2rem;
-    right: 1.5rem;
-    /*font-size: 0.85rem;*/
-    box-shadow: 0rem 0.25rem 1rem rgba(0,0,0,0.3);
-  }
-  #contributeCTA span {
-    display: none;
-  }
-  #contributeCTA svg {
-    font-size: 1.25rem;
-  }
-  @media only screen and (max-width: 767px) {
-    #contributeCTA {
-      position: fixed;
-      z-index: 100;
-      bottom: 1rem;
-      right: 1rem;
-      font-size: 0.85rem;
-      box-shadow: 0rem 0.25rem 1rem rgba(0,0,0,0.3);
-    }
-    #contributeCTA svg {
-      font-size: 1rem;
-    }
-  }
-</style>
-
-
 <!-- Contribute CTA -->
 <a id="contributeCTA" class="btn btn-light rounded-pill small" href="https://github.com/ethstaker/website/blob/main/{{page.path}}" target="_blank">
   {{site.data.icons.github}} Edit Page

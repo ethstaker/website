@@ -30,16 +30,17 @@
   <link rel="canonical" href="{{site.url}}" />
 
   {%- assign favicon = "/assets/img/ethstaker/icons" -%}
-  {%- assign color = "#E3FFFD" -%}
+  {%- assign color = "#000004" -%}
   <link rel="apple-touch-icon" sizes="180x180" href="{{favicon}}/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="{{favicon}}/favicon-16x16.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="{{favicon}}/favicon-32x32.png" />
   <link rel="manifest" href="{{favicon}}/site.webmanifest" />
-  <link rel="mask-icon" href="{{favicon}}/safari-pinned-tab.svg" color="{{color}}" />
+  <link rel="mask-icon" href="{{favicon}}/safari-pinned-tab.svg" color="#00D4FF" />
   <link rel="shortcut icon" href="{{favicon}}/favicon.ico" />
   <meta name="msapplication-TileColor" content="{{color}}" />
   <meta name="msapplication-config" content="{{favicon}}/browserconfig.xml" />
   <meta name="theme-color" content="{{color}}" />
+  <meta name="color-scheme" content="dark light" />
 
   {%- assign cover = site.url | append: "/assets/img/ethstaker/cover/cover.png" -%}
   <meta property="og:locale" content="en-US" />
@@ -57,6 +58,25 @@
   <meta name="twitter:image:src" content="{{cover}}" />
   <meta name="twitter:image:alt" content="{{title}}" />
 
+  <!-- Theme init: apply the saved theme (or the OS preference, dark by default)
+       before the first paint so there is no flash. Mirrors ethcoordinate.org. -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var stored = null;
+      try { stored = localStorage.getItem("darkModeEnabled"); } catch (e) {}
+      var dark = (stored === "true" || stored === "false")
+        ? stored === "true"
+        : !window.matchMedia("(prefers-color-scheme: light)").matches;
+      root.setAttribute("data-bs-theme", dark ? "dark" : "light");
+      root.classList.toggle("dark-mode", dark);
+    })();
+  </script>
+  <style>
+    html { background-color: #000004; }
+    html[data-bs-theme="light"] { background-color: #F4F6F9; }
+  </style>
+
   <!-- Bootstrap 5 CSS -->
   {{site.bootstrap_css}}
   <!-- AOS CSS -->
@@ -64,9 +84,10 @@
   <!-- Bootstrap 5 JS -->
   {{site.bootstrap_js}}
 
-  <!-- Font -->
+  <!-- Font: JetBrains Mono, shared with ethcoordinate.org -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet" />
 
   <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />

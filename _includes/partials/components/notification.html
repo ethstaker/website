@@ -1,8 +1,8 @@
 {%- comment -%}
-<!-- 
-When creating new notification you must increase 
-the config.yml "notification_msg_id" value so it 
-will show again for users that previously closed it 
+<!--
+When creating new notification you must increase
+the config.yml "notification_msg_id" value so it
+will show again for users that previously closed it
 
 Add to config.yml:
 # Notification Bar
@@ -10,38 +10,18 @@ enable_notification: false
 notification_msg_id: 1 # must increment when creating a new message
 notification_msg: Join the community!<br><a href=""></a>.
 notification_expiration: 3000000000 # epoch time in seconds
+
+Styles live in assets/css/main.css (#notification).
 -->
 {%- endcomment -%}
 
 {%- if site.enable_notification == true -%}
-<style type="text/css">
-  #notification {
-    position: fixed;
-    z-index: 101;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: var(--bs-dark);
-    text-align: center;
-    overflow: hidden;
-    box-shadow: 0 -0.5rem 1rem rgba(0,0,0,.15);
-    background-color: var(--bs-body-bg);
-  }
-  #notification a {
-    color: var(--bs-dark);
-  }
-  #notificationClose {
-    cursor: pointer;
-  }
-</style>
-
-
 <!-- Notification Bar -->
-<div id="notification" class="d-none d-flex bg-warning">
+<div id="notification" class="d-none d-flex">
   <span id="notification_msg" class="flex-grow-1 py-2 ps-3 pe-1">
     {{site.notification_msg}}
   </span>
-  <span id="notificationClose" class="mx-2 my-auto py-1 px-2" onclick="hideNotification()">✕</span>
+  <span id="notificationClose" class="mx-2 my-auto py-1 px-2" onclick="hideNotification()" role="button" aria-label="Dismiss notification">✕</span>
 </div>
 
 

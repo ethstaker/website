@@ -2,7 +2,7 @@
 // https://michalsnik.github.io/aos/
 // - Initializes library
 // - Dynamically add fade in animations to content
-//   this is done dynamically so the content will 
+//   this is done dynamically so the content will
 //   still show if the user has javascript disabled
 
 // Usage:
@@ -15,6 +15,8 @@ const aosSelectors = [
   "body > header",
   "body > section",
   "body > footer",
+  "main > header",
+  "main > section",
   // "table",
   // ".markdown-aos > h1",
   // ".markdown-aos > h2",
@@ -47,7 +49,7 @@ document.querySelectorAll(".aos-left")
 AOS.init({
   // Global settings:
   disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-  
+
   // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
   offset: 120, // offset (in px) from the original trigger point
   delay: 50, // values from 0 to 3000, with step 50ms

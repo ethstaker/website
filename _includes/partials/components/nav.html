@@ -1,38 +1,39 @@
 {%- if site.enable_nav == true -%}
-<style type="text/css">
-  .nav-link,
-  .nav-link:visited {
-    padding-bottom: 0px;
-  }
-</style>
-
-
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg site-nav" aria-label="Primary navigation">
   <div class="container">
-    <a class="navbar-brand" href="/">
-      <img src="/assets/img/ethstaker/logo-text-black.svg" alt="Logo" height="27" class="d-inline-block d-light align-text-top">
-      <img src="/assets/img/ethstaker/logo-text-white.svg" alt="Logo" height="27" class="d-inline-block d-dark align-text-top">
+    <a class="navbar-brand brand-link" href="/" aria-label="EthStaker home">
+      <img src="/assets/img/ethstaker/logo-text-black.svg" alt="EthStaker" class="brand-logo d-light">
+      <img src="/assets/img/ethstaker/logo-text-white.svg" alt="EthStaker" class="brand-logo d-dark">
+      <span class="brand-copy"><small>An EthCoordinate initiative</small></span>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+
+    <div class="nav-actions order-lg-last">
+      <a class="nav-cta d-none d-lg-inline-flex" href="/staking">Start staking</a>
+      {% include partials/components/dark-mode-toggle.html %}
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <svg class="icon-open" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <svg class="icon-close" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mb-3 mb-lg-0 flex-fill justify-content-center">
-        <li class="nav-item dropdown me-3">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navDropdownIntro" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Intro
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu" aria-labelledby="navDropdownIntro">
             <li><a class="dropdown-item" href="/about">About EthStaker</a></li>
             <li><a class="dropdown-item" href="/events">Events</a></li>
             <li><a class="dropdown-item" href="https://docs.ethstaker.org/faq" target="_blank">FAQ</a></li>
+            <li><a class="dropdown-item" href="https://ethcoordinate.org" target="_blank">EthCoordinate</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown me-3">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navDropdownStart" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Get Started
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu" aria-labelledby="navDropdownStart">
             <li><a class="dropdown-item" href="/staking">Staking</a></li>
             <li><a class="dropdown-item" href="https://docs.ethstaker.org/" target="_blank">Knowledge Base</a></li>
             <li><a class="dropdown-item" href="/solo-staking-guides">Guides</a></li>
@@ -41,11 +42,11 @@
             <li><a class="dropdown-item" href="/staking#staking-quiz">Staking Quiz</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown me-3">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navDropdownExisting" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Existing Stakers
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu" aria-labelledby="navDropdownExisting">
             <li><a class="dropdown-item" href="/support">Support</a></li>
             <li><a class="dropdown-item" href="/mev-relay-list">MEV Relay List</a></li>
             <li><a class="dropdown-item" href="/smoothing-pools">Smoothing Pools</a></li>
@@ -55,22 +56,22 @@
             <!-- <li><a class="dropdown-item" href="/jobs/job-listings">Jobs</a></li> -->
           </ul>
         </li>
-        <li class="nav-item dropdown me-3">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navDropdownUpdates" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Updates
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu" aria-labelledby="navDropdownUpdates">
             <li><a class="dropdown-item" href="/incidents" target="_blank">Incidents</a></li>
             <li><a class="dropdown-item" href="/blog" target="_blank">Blog</a></li>
             <li><a class="dropdown-item" href="/rhino-review">Staking Newsletter</a></li>
             <li><a class="dropdown-item" href="/research" target="_blank">Current Research</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown me-3">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navDropdownCommunity" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Community
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu" aria-labelledby="navDropdownCommunity">
             <li><a class="dropdown-item" href="http://dsc.gg/ethstaker" target="_blank">Discord</a></li>
             <li><a class="dropdown-item" href="https://reddit.com/r/ethstaker" target="_blank">Reddit</a></li>
             <li><a class="dropdown-item" href="https://warpcast.com/~/channel/eth-staker" target="_blank">Farcaster</a></li>
@@ -79,15 +80,8 @@
             <li><a class="dropdown-item" href="/staking-communities">Allied Communities</a></li>
           </ul>
         </li>
-        <li class="nav-item me-5">
-          <!-- keep this, used to center the header -->
-        </li>
       </ul>
-      <form class="d-flex mb-auto" role="search">
-        <!-- <a class="btn btn-warning shadow-sm me-2" href=""></a> -->
-        <a class="btn btn-outline-dark shadow-sm" href="/staking">Start Staking</a>
-        {% include partials/components/dark-mode-toggle.html %}
-      </form>
+      <a class="nav-cta nav-cta--mobile d-lg-none" href="/staking">Start staking →</a>
     </div>
   </div>
 </nav>

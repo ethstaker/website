@@ -25,6 +25,11 @@ function updateLinkTargets() {
       links[link].target = "_self";
       links[link].classList.remove("new-tab");
     }
+    // same-origin links are internal on any host (localhost, deploy previews)
+    if (href != undefined && window.location.host != "" && href.includes("//" + window.location.host)) {
+      links[link].target = "_self";
+      links[link].classList.remove("new-tab");
+    }
     // The above condition should catch this, but leaving it here in case it needs to be stated explicitely
     // if ( (href != undefined && href[0] == "#") || (href != undefined && href[0] == "/") ) {
     //   links[link].target = "_self";

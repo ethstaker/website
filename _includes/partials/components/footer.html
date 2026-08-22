@@ -1,143 +1,80 @@
-{%- assign padding = "mt-5 pt-5" -%}
-{%- assign pages_without_padding = "index.md,staking.md" | split: "," -%}
-{%- if pages_without_padding contains page.name -%}
-  {%- assign padding = "" -%}
-{%- endif -%}
-
-
-<style type="text/css">
-  footer .disclaimer {
-    font-size: 0.85rem;
-  }
-
-  .dark-mode .link-dark {
-    color: var(--bs-gray-500) !important;
-  }
-</style>
-
-
-<footer class="{{padding}} aos-up" data-aos-anchor-placement="top-bottom" data-aos-offset="50">
+<footer class="site-footer aos-up" data-aos-anchor-placement="top-bottom" data-aos-offset="50">
   <div class="container">
-    <div class="py-5 border-top">
-      <div class="row">
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3">
-          <h5>Intro</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="/about">About EthStaker</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="/events">Events</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="https://docs.ethstaker.org/faq" target="_blank">FAQ</a></li>
-          </ul>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3">
-          <h5>Get Started</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="/safety">Safety</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="/staking">Staking</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="https://docs.ethstaker.org/" target="_blank">Knowledge Base</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="/solo-staking-guides">Guides</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="/staking-hardware">Hardware</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="/staking-software">Software</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="/staking#staking-quiz">Staking Quiz</a></li>
-          </ul>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3">
-          <h5>Existing Stakers</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="/support">Support</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="/mev-relay-list">MEV Relay List</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="/smoothing-pools">Smoothing Pools</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="/tax">Taxes</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="/airdrops">Airdrops</a></li>
-            <!-- <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="/jobs/job-listings">Jobs</a></li> -->
-          </ul>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3">
-          <h5>Updates</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="/incidents" target="_blank">Incidents</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="/blog" target="_blank">Blog</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="/rhino-review">Staking Newsletter</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="/research" target="_blank">Current Research</a></li>
-          </ul>
-        </div>
-
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3">
-          <h5>Community</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="http://dsc.gg/ethstaker" target="_blank">Discord</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="https://reddit.com/r/ethstaker" target="_blank">Reddit</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="https://warpcast.com/~/channel/eth-staker" target="_blank">Farcaster</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="https://twitter.com/ethStaker" target="_blank">Twitter</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="https://www.youtube.com/@ETHStaker" target="_blank">YouTube</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="/staking-communities">Allied Communities</a></li>
-          </ul>
-        </div>
-
-        <div class="col-12 my-3">
-          <div class="disclaimer mb-3 mt-3 mt-md-0">
-            <p><strong>Not financial or tax advice.</strong> EthStaker content is strictly educational and is not investment advice or a solicitation to buy or sell any assets or to make any financial decisions. This content is not tax advice. Talk to your accountant. Do your own research.</p>
-
-            <p><strong>Disclosure.</strong> We may link to projects or services we support and use. We do not receive commission if you use services through one of these links. Additionally, EthStaker stewards participate in projects and hold crypto assets. See our investments disclosures <a href="/disclosures">here</a>.</p>
-          </div>
-        </div>
-
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo" aria-label="EthStaker home">
+          <img src="/assets/img/ethstaker/logo-text-black.svg" alt="EthStaker" class="d-light">
+          <img src="/assets/img/ethstaker/logo-text-white.svg" alt="EthStaker" class="d-dark">
+        </a>
+        <p>Welcoming first, knowledgeable second.</p>
+        <p class="footer-parent">An initiative of <a href="https://ethcoordinate.org" target="_blank" rel="noopener noreferrer">EthCoordinate <span aria-hidden="true">↗</span></a></p>
+        <a href="mailto:team@ethstaker.org" class="footer-mail">team@ethstaker.org</a>
       </div>
 
-      <div class="d-flex flex-column flex-sm-row justify-content-md-between py-3 my-4 border-top">
-        <a href="/" class="text-center">
-          <img src="/assets/img/ethstaker/logo-text-black.svg" alt="Logo" height="35" class="d-inline-block d-light align-text-top my-2">
-          <img src="/assets/img/ethstaker/logo-text-white.svg" alt="Logo" height="35" class="d-inline-block d-dark align-text-top my-2">
-        </a>
-        <ul class="footer-socials list-unstyled d-flex justify-content-center">
-          <li class="me-3">
-            <a class="link-dark fs-3" href="http://dsc.gg/ethstaker" target="_blank">
-            {{site.data.icons.discord}}
-            </a>
-          </li>
-          <li class="me-3">
-            <a class="link-dark fs-3" href="https://www.youtube.com/@ETHStaker" target="_blank">
-            {{site.data.icons.youtube}}
-            </a>
-          </li>
-          <li class="me-3">
-            <a class="link-dark fs-3" href="https://reddit.com/r/ethstaker" target="_blank">
-            {{site.data.icons.reddit}}
-            </a>
-          </li>
-          <li class="me-3">
-            <a class="link-dark fs-3" href="https://twitter.com/ethStaker" target="_blank">
-            {{site.data.icons.twitter_x}}
-            </a>
-          </li>
-          <li class="me-3">
-            <a class="link-dark fs-3" href="https://www.linkedin.com/company/ethstaker/" target="_blank">
-            {{site.data.icons.linkedin}}
-            </a>
-          </li>
-          <li class="me-3">
-            <a class="link-dark fs-3" href="https://www.facebook.com/EthStakerOrg/" target="_blank">
-            {{site.data.icons.facebook}}
-            </a>
-          </li>
-          <li class="me-3">
-            <a class="link-dark fs-3" href="https://github.com/ethstaker/" target="_blank">
-            {{site.data.icons.github}}
-            </a>
-          </li>
-          <li class="me-3">
-            <a class="link-dark fs-3" href="{{site.calendar_link}}" target="_blank">
-            {{site.data.icons.calendar}}
-            </a>
-          </li>
-          <li class="me-3">
-            <a class="link-dark fs-3" href="mailto:team@ethstaker.org" target="_blank">
-            {{site.data.icons.mail2}}
-            </a>
-          </li>
-        </ul>
+      <div class="footer-nav-groups">
+        <nav aria-label="Intro links">
+          <span>Intro</span>
+          <a href="/about">About EthStaker</a>
+          <a href="/events">Events</a>
+          <a href="https://docs.ethstaker.org/faq" target="_blank">FAQ</a>
+          <a href="https://ethcoordinate.org" target="_blank">EthCoordinate</a>
+        </nav>
+        <nav aria-label="Get started links">
+          <span>Get Started</span>
+          <a href="/safety">Safety</a>
+          <a href="/staking">Staking</a>
+          <a href="https://docs.ethstaker.org/" target="_blank">Knowledge Base</a>
+          <a href="/solo-staking-guides">Guides</a>
+          <a href="/staking-hardware">Hardware</a>
+          <a href="/staking-software">Software</a>
+          <a href="/staking#staking-quiz">Staking Quiz</a>
+        </nav>
+        <nav aria-label="Existing stakers links">
+          <span>Existing Stakers</span>
+          <a href="/support">Support</a>
+          <a href="/mev-relay-list">MEV Relay List</a>
+          <a href="/smoothing-pools">Smoothing Pools</a>
+          <a href="/tax">Taxes</a>
+          <a href="/airdrops">Airdrops</a>
+          <!-- <a href="/jobs/job-listings">Jobs</a> -->
+        </nav>
+        <nav aria-label="Updates links">
+          <span>Updates</span>
+          <a href="/incidents" target="_blank">Incidents</a>
+          <a href="/blog" target="_blank">Blog</a>
+          <a href="/rhino-review">Staking Newsletter</a>
+          <a href="/research" target="_blank">Current Research</a>
+        </nav>
+        <nav aria-label="Community links">
+          <span>Community</span>
+          <a href="http://dsc.gg/ethstaker" target="_blank">Discord</a>
+          <a href="https://reddit.com/r/ethstaker" target="_blank">Reddit</a>
+          <a href="https://warpcast.com/~/channel/eth-staker" target="_blank">Farcaster</a>
+          <a href="https://twitter.com/ethStaker" target="_blank">Twitter</a>
+          <a href="https://www.youtube.com/@ETHStaker" target="_blank">YouTube</a>
+          <a href="/staking-communities">Allied Communities</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="footer-disclaimer">
+      <p><strong>Not financial or tax advice.</strong> EthStaker content is strictly educational and is not investment advice or a solicitation to buy or sell any assets or to make any financial decisions. This content is not tax advice. Talk to your accountant. Do your own research.</p>
+
+      <p><strong>Disclosure.</strong> We may link to projects or services we support and use. We do not receive commission if you use services through one of these links. Additionally, EthStaker stewards participate in projects and hold crypto assets. See our investments disclosures <a href="/disclosures">here</a>.</p>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© {{ site.time | date: "%Y" }} EthStaker · An EthCoordinate initiative</span>
+      <div class="footer-links">
+        <a href="http://dsc.gg/ethstaker" target="_blank">Discord</a>
+        <a href="https://www.youtube.com/@ETHStaker" target="_blank">YouTube</a>
+        <a href="https://reddit.com/r/ethstaker" target="_blank">Reddit</a>
+        <a href="https://twitter.com/ethStaker" target="_blank">X</a>
+        <a href="https://www.linkedin.com/company/ethstaker/" target="_blank">LinkedIn</a>
+        <a href="https://www.facebook.com/EthStakerOrg/" target="_blank">Facebook</a>
+        <a href="https://github.com/ethstaker/" target="_blank">GitHub</a>
+        <a href="{{site.calendar_link}}" target="_blank">Calendar</a>
+        <a href="mailto:team@ethstaker.org">Email</a>
       </div>
     </div>
   </div>

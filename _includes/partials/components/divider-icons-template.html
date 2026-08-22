@@ -1,40 +1,23 @@
-<style type="text/css">
-  .divider-icons {
-    width: 100%;
-    max-width: 100%;
-  }
-  .divider-icons img,
-  .divider-icons svg {
-    height: 50px;
-    width: auto;
-    display: inline-block;
-    filter: brightness(0%) !important;
-    opacity: 0.15;
-  }
-  
-  .dark-mode .divider-icons img,
-  .dark-mode .divider-icons svg {
-    opacity: 0.25;
-    filter: contrast(0%) brightness(120%) sepia(100%) hue-rotate(175deg) grayscale(20%) !important;
-  }
-</style>
-
-
-<!-- Project Icons Divider -->
+<!-- Icons divider: a thin gradient rule with dimmed project logos, in the
+     style of the ethcoordinate.org section dividers. Styles live in main.css. -->
 <section class="{{include.class}} divider-icons overflow-hidden aos-up">
-  <div class="container my-5">
-    <div class="d-flex justify-content-center">
-      {% assign imgs = include.imgs | split: "," | trim %}
-      {%- for img in imgs -%}
-        {%- if img contains "site.data" -%}
-          {% assign img_path = img | replace: "site.data", "" | split: "." %}
-          {% assign img_file = img_path[1] %}
-          {% assign img_target = img_path[2] %}
-          <span class="mx-3 mx-lg-4">{{site.data[img_file][img_target]}}</span>
-        {%- else -%}
-          <img class="mx-3 mx-lg-4" src="{{img}}">
-        {%- endif -%}
-      {%- endfor -%}
+  <div class="container">
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-icons-row">
+        {% assign imgs = include.imgs | split: "," | trim %}
+        {%- for img in imgs -%}
+          {%- if img contains "site.data" -%}
+            {% assign img_path = img | replace: "site.data", "" | split: "." %}
+            {% assign img_file = img_path[1] %}
+            {% assign img_target = img_path[2] %}
+            <span>{{site.data[img_file][img_target]}}</span>
+          {%- else -%}
+            <img src="{{img}}" alt="" loading="lazy">
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      <div class="divider-line"></div>
     </div>
   </div>
 </section>

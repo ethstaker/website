@@ -1,51 +1,27 @@
-<style type="text/css">
-  header .quote {
-    background: linear-gradient(to right, rgba(var(--brand-color-1-rgb),1) 85%,rgba(var(--brand-color-1-rgb),0) 100%);
-    border-left: 2px solid var(--brand-color-4);
-  }
-  header .floating-hover {
-    margin-top: -3em;
-  }
-</style>
+<!-- Hero — mirrors the ethcoordinate.org hero: eyebrow, name, lead, terminal -->
+<header class="es-hero">
+  <img class="hero-bg-mark" src="/assets/img/ethstaker/logo-blue.svg" alt="" aria-hidden="true">
+  <div class="hero-glow" aria-hidden="true"></div>
 
+  <div class="container hero-inner">
+    <p class="hero-eyebrow">An EthCoordinate initiative</p>
+    <h1 class="hero-title"><strong>EthStaker</strong></h1>
+    <p class="hero-lead">EthStaker is a community providing guidance, education, support, and resources for existing and potential stakers. Our principal goal is to maximize decentralization of the Ethereum network.</p>
 
-<!-- Header -->
-<header class="mt-0 mt-sm-2 mt-md-3 mt-xl-5 pt-4 pt-md-5">
-  <div class="container my-0 mt-lg-4 mb-lg-2 p-4">
-    <div class="row justify-content-center align-items-center">
-      <div class="col-12 col-xl-7 p-md-3 p-lg-5 pt-lg-3 aos-right">
-        <h1 class="display-4 fw-bold lh-1 mb-3">What is EthStaker?</h1>
-        <p class="lead quote text-dark fw-semibold py-2 px-3 ps-lg-4"><em>"Welcoming first, knowledgeable second"</em></p>
-        <p class="lead">EthStaker is a community providing guidance, education, support, and resources for existing and potential stakers. EthStaker’s principal goal is to maximize decentralization of the Ethereum network.</p>
-        <div class="gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-          <a href="/about" class="btn btn-dark btn-lg shadow">Learn more</a>
-        </div>
+    <div class="terminal" aria-label="EthStaker status">
+      <div class="terminal-bar">
+        <span class="terminal-dot r"></span>
+        <span class="terminal-dot y"></span>
+        <span class="terminal-dot g"></span>
+        <span class="terminal-title">ethstaker — status</span>
       </div>
-      <div class="col-lg-4 ps-xxl-5 d-none d-xl-block aos-left">
-        <img class="floating-hover" src="/assets/img/ethstaker/logo-blue.svg" alt="">
+      <div class="terminal-body">
+        <div class="t-line"><span class="t-prompt">→</span><span class="t-cmd">./ethstaker --status</span></div>
+        <div class="t-out">✓ <a href="https://docs.ethstaker.org/" target="_blank">Knowledge base</a>, guides, and support channels are open</div>
+        <div class="t-out">✓ Solo staking remains the gold standard</div>
+        <div class="t-out">✓ Staker support · An initiative of <a href="https://ethcoordinate.org" target="_blank">EthCoordinate</a></div>
+        <div class="t-line"><span class="t-prompt">→</span><span class="cursor"></span></div>
       </div>
     </div>
   </div>
 </header>
-
-
-{%- comment -%}
-<!-- Header reversed -->
-<header class="d-none mt-0 mt-sm-2 mt-md-3 mt-xl-5 pt-4 pt-md-5">
-  <div class="container my-0 mt-lg-4 mb-lg-2 p-4">
-    <div class="row justify-content-center align-items-center">
-      <div class="col-lg-4 pe-xxl-5 d-none d-xl-block aos-right">
-        <img class="floating-hover" src="/assets/img/ethstaker/logo-blue.svg" alt="">
-      </div>
-      <div class="col-12 col-xl-7 p-md-3 p-lg-5 pt-lg-3">
-        <h1 class="display-4 fw-bold lh-1 mb-3">What is EthStaker?</h1>
-        <p class="lead fw-semibold quote py-2 px-3 ps-lg-4 aos-left"><em>"Welcoming first, knowledgeable second"</em></p>
-        <p class="lead">EthStaker is a community providing guidance, education, support, and resources for existing and potential stakers. EthStaker’s principal goal is to maximize decentralization of the Ethereum network.</p>
-        <div class="gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-          <a href="/about" class="btn btn-dark btn-lg shadow">Learn more</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-{%- endcomment -%}
