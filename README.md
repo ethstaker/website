@@ -7,6 +7,7 @@ This is the source code for EthStaker's website, <https://ethstaker.org>.
 **Table of Contents**
 
 - [Local Development](#local-development)
+- [Theme](#theme)
 - [Directory Structure](#directory-structure)
 - [Editing Existing Content](#editing-existing-content)
     - [Adding Resources](#adding-resources)
@@ -40,6 +41,13 @@ Resources:
 - [Jekyll Docs](https://jekyllrb.com/docs/)
 - [Liquid Syntax](https://shopify.github.io/liquid/basics/introduction/)
 
+
+
+## Theme
+
+The site shares the [EthCoordinate](https://ethcoordinate.org) design system: JetBrains Mono, cyan/purple accents on a near-black background, and a matching light palette. Everything lives in `assets/css/main.css` (tokens, Bootstrap variable remaps, nav, hero, footer, components) and `assets/css/markdown.css` (long-form content). Bootstrap 5 still handles layout, so existing utility classes and partials keep working.
+
+Dark mode is the default unless the OS prefers light or the visitor toggles the theme; the choice is stored in `localStorage` (`darkModeEnabled`) and applied before first paint by the inline script in `_includes/partials/components/head.html`.
 
 
 ## Directory Structure

@@ -1,58 +1,81 @@
-.markdown,
-.markdown p,
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4,
+/* =============================================================
+   Long-form content (markdown layout) — EthCoordinate tokens
+   ============================================================= */
+
+.markdown { font-size: 0.95rem; }
+.markdown h1 { font-weight: 700; }
+.markdown h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 1.6rem;
+}
+.markdown h3 {
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+.markdown h4 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+}
 .markdown h5,
 .markdown h6 {
-  
-}
-.markdown h1 {
-  font-weight: 600;
-}
-.markdown h2 {
-  font-weight: 600;
-  margin-top: 2.5rem;
-  margin-bottom: 2rem;
-}
-.markdown h3, h4 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 .markdown p {
-  font-size: 1.15rem;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--color-text-body);
 }
+.markdown strong { color: var(--color-text-bright); }
 .markdown a {
+  color: var(--color-blue);
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
-.markdown hr {
-  margin: 3rem 0 1rem 0;
-}
+.markdown a:hover { color: var(--color-blue-light); }
+.markdown a.btn { color: var(--bs-btn-color); text-decoration: none; }
+.markdown a.btn:hover { color: var(--bs-btn-hover-color); }
+.markdown hr { margin: 3rem 0 1rem 0; }
+.markdown ul,
+.markdown ol { padding-left: 1.4rem; }
 .markdown li {
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
+  line-height: 1.75;
 }
+.markdown li::marker { color: var(--color-blue); }
 .markdown blockquote {
-  border-left: 0.25rem solid var(--bs-body-color);
-  padding-left: 1rem;
+  margin: 1.5rem 0;
+  padding: 0.9rem 1.15rem;
+  border-left: 2px solid var(--color-blue);
+  border-radius: 0 6px 6px 0;
+  background: var(--color-bg-surface);
+  color: var(--color-text-body);
 }
+.markdown blockquote p:last-child { margin-bottom: 0; }
 .markdown details {
   text-align: left;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 6px;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  background-color: var(--bs-body-bg);
-  /*from .border*/
-  border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
-  /*from .shadow-sm*/
-  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border) !important;
+}
+.markdown details summary {
+  color: var(--color-text-bright);
+  font-weight: 600;
+  cursor: pointer;
 }
 .markdown details[open] summary {
   margin-bottom: 10px;
   padding-bottom: 10px;
-  border-bottom: solid 1px var(--bs-border-color);
+  border-bottom: solid 1px var(--color-border);
 }
 .markdown img {
   margin: 5px auto;
@@ -60,97 +83,90 @@
   height: auto;
   max-height: 350px;
   display: block;
+  border-radius: 6px;
 }
-.markdown p>img {
-  /*from .shadow*/
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-}
+.markdown p > img { border: 1px solid var(--color-border); }
 .markdown .caption {
   display: block;
   text-align: center;
-  font-size: .875em;
-  padding-bottom: 1rem!important;
+  font-size: 0.8em;
+  color: var(--color-text-muted);
+  padding-bottom: 1rem !important;
 }
 .markdown table {
-  font-size: 1.05rem;
+  font-size: 0.875rem;
 
-  /*fallback from .table*/
-  --bs-table-color: var(--bs-body-color);
+  /* fallback from .table */
+  --bs-table-color: var(--color-text-body);
   --bs-table-bg: transparent;
-  --bs-table-border-color: var(--bs-border-color);
+  --bs-table-border-color: var(--color-border);
   --bs-table-accent-bg: transparent;
-  --bs-table-striped-color: var(--bs-body-color);
-  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
-  --bs-table-active-color: var(--bs-body-color);
-  --bs-table-active-bg: rgba(0, 0, 0, 0.1);
-  --bs-table-hover-color: var(--bs-body-color);
-  --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+  --bs-table-striped-color: var(--color-text-body);
+  --bs-table-striped-bg: rgba(0, 212, 255, 0.03);
+  --bs-table-active-color: var(--color-text-bright);
+  --bs-table-active-bg: var(--tint-blue-strong);
+  --bs-table-hover-color: var(--color-text-bright);
+  --bs-table-hover-bg: var(--tint-blue);
   width: 100%;
   margin-bottom: 1rem;
   color: var(--bs-table-color);
   vertical-align: top;
   border-color: var(--bs-table-border-color);
 
-  /*fallback from .mx-auto*/
-  margin-right: auto!important;
-  margin-left: auto!important;
+  /* fallback from .mx-auto */
+  margin-right: auto !important;
+  margin-left: auto !important;
 }
-.markdown .table>tbody>tr:nth-of-type(even)>* {
-  /*fallback from .table-striped*/
-  /*--bs-table-accent-bg: var(--bs-table-striped-bg);
-  color: var(--bs-table-striped-color);*/
-}
-.markdown table>thead {
-  background-color: var(--bs-body-bg);
+.markdown table > thead {
+  background-color: var(--color-bg-elevated);
 
-  /*fallback from .sticky-top*/
+  /* fallback from .sticky-top */
   position: sticky;
   top: -1px;
   z-index: 1020;
 }
-.markdown table>:not(:last-child)>:last-child>* {
-  
-}
-.table-bordered>:not(caption)>*{
+.table-bordered > :not(caption) > * {
   border-width: 1px 0;
 }
-.markdown table>:not(caption)>*>* {
+.markdown table > :not(caption) > * > * {
   padding: 0.5rem 0.5rem;
   background-color: var(--bs-table-bg);
   border-bottom-width: 1px;
   box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
 }
-.markdown table>tbody {
-
-}
 .markdown pre {
-  background-color: rgba(0, 0, 0, 1);
-  padding: 10px 15px;
-  border-radius: 0.5rem;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  overflow-x: auto;
 }
-.markdown pre code {
-  color: rgba(255, 255, 255, 0.9);
-}
+.markdown pre code { color: var(--color-text-secondary); }
 
 /* markdown header anchor link copy icon */
 .markdown .copy-link-icon {
-  color: var(--bs-secondary);
+  color: var(--color-text-muted);
   opacity: 0.6;
   cursor: pointer;
   position: absolute;
+  margin-left: 0.35rem;
+  transition: opacity 0.15s ease, color 0.15s ease;
 }
+.markdown .copy-link-icon:hover { opacity: 1; color: var(--color-blue); }
 .markdown .copy-link-icon > svg {
-  height: 2rem;
+  height: 1.5rem;
   width: auto;
 }
 
-
-/*adds sticky header*/
+/* adds sticky header */
 .markdown .table-responsive {
   max-height: 700px;
   overflow: scroll;
-  position: relative!important;
-  /*widens table*/
+  position: relative !important;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  /* widens table */
   margin-left: -250px !important;
   margin-right: -250px !important;
   margin-top: 1.5rem;
@@ -178,13 +194,13 @@
     max-height: 400px;
   }
 }
-/*adds sticks first column*/
+/* adds sticky first column */
 .markdown .table thead tr {
-  background-color: var(--bs-tertiary-bg);
+  background-color: var(--color-bg-elevated);
 }
 .markdown .table th:first-child,
 .markdown .table td:first-child {
   position: sticky;
   left: -1px;
-  background-color: var(--bs-tertiary-bg);
+  background-color: var(--color-bg-elevated);
 }

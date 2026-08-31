@@ -1,90 +1,61 @@
 {%- comment -%}
-<!-- 
-Adds a dark mode theme. 
-Defaults to system preference and overridden by manual toggle.
-Adds a .dark-mode class to html element.
+<!--
+Dark / light theme toggle.
+Defaults to dark (matching ethcoordinate.org) unless the OS prefers light
+or the visitor previously picked a theme. The inline script in head.html
+applies the same rule before first paint; this include only keeps the
+button state in sync and stores an explicit choice.
+Sets data-bs-theme on <html> plus a .dark-mode class for legacy selectors.
 -->
 {%- endcomment -%}
 
-<style type="text/css">
-  #darkModeToggle {
-    padding: 5px;
-    cursor: pointer;
-    margin-right: -2rem;
-    margin-left: 1.5rem;
-  }
-  @media only screen and (max-width: 1399px) {
-    #darkModeToggle {
-      margin-right: -1.5rem;
-    }
-  }
-  @media only screen and (max-width: 1199px) {
-    #darkModeToggle {
-      margin-right: -0.75rem;
-    }
-  }
-  @media only screen and (max-width: 991px) {
-    #darkModeToggle {
-      margin-right: 1rem;
-      margin-left: auto!important;
-    }
-  }
-  #darkModeToggle svg {
-    height: 1.5rem;
-    width: 1.5rem;
-  }
-  .d-dark,
-  .dark-mode .d-light {
-    display: none !important;
-  }
-  .d-light,
-  .dark-mode .d-dark {
-    display: unset !important;
-  }
-</style>
-
-
-<div id="darkModeToggle" class="">
-    <span id="enableDarkMode" onclick="setDarkMode('true')">{{site.data.icons.sun}}</span>
-    <span id="disableDarkMode" class="d-none" onclick="setDarkMode('false')">{{site.data.icons.sun}}</span>
+<div id="darkModeToggle">
+  <button type="button" id="enableDarkMode" class="d-none" onclick="setDarkMode('true')" aria-label="Switch to dark mode" title="Switch to dark mode">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+  <button type="button" id="disableDarkMode" class="d-none" onclick="setDarkMode('false')" aria-label="Switch to light mode" title="Switch to light mode">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </button>
 </div>
 
 
 <script type="text/javascript">
   checkDarkMode();
-  
-  // Check if dark mode is set
+
+  // Apply the stored theme, or fall back to the OS preference (dark by default)
   function checkDarkMode() {
-    let darkModeEnabled = localStorage.getItem("darkModeEnabled");
-    if (darkModeEnabled === null) {
-      let matched = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      if(matched) {
-        setDarkMode("true");
-      } else {
-        setDarkMode("false");
-      }
+    let darkModeEnabled = null;
+    try { darkModeEnabled = localStorage.getItem("darkModeEnabled"); } catch (e) {}
+    if (darkModeEnabled === "true" || darkModeEnabled === "false") {
+      setDarkMode(darkModeEnabled, false);
     } else {
-      setDarkMode(darkModeEnabled);
+      let prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+      setDarkMode(prefersLight ? "false" : "true", false);
     }
   }
 
   // Toggle dark mode theme
-  function setDarkMode(enabled) {
-    document.getElementById("enableDarkMode").classList.add("d-none");
-    document.getElementById("disableDarkMode").classList.add("d-none");
-    var root = document.getElementsByTagName("html")[0];
-    if (enabled == "true") {
-      // log("Dark Mode enabled");
-      root.setAttribute("data-bs-theme", "dark"); 
-      root.classList.add("dark-mode");
-      document.getElementById("disableDarkMode").classList.remove("d-none");
-      localStorage.setItem("darkModeEnabled", "true");
-    } else if (enabled == "false") {
-      // log("Dark Mode disabled");
-      root.setAttribute("data-bs-theme", "light"); 
-      root.classList.remove("dark-mode");
-      document.getElementById("enableDarkMode").classList.remove("d-none");
-      localStorage.setItem("darkModeEnabled", "false");
+  function setDarkMode(enabled, persist = true) {
+    const root = document.documentElement;
+    const dark = enabled == "true";
+    root.setAttribute("data-bs-theme", dark ? "dark" : "light");
+    root.classList.toggle("dark-mode", dark);
+    document.getElementById("enableDarkMode").classList.toggle("d-none", dark);
+    document.getElementById("disableDarkMode").classList.toggle("d-none", !dark);
+    if (persist) {
+      try { localStorage.setItem("darkModeEnabled", dark ? "true" : "false"); } catch (e) {}
     }
   }
 </script>

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100" data-bs-theme="light">
+<html lang="en" class="h-100 dark-mode" data-bs-theme="dark">
   {%- include partials/components/head.html -%}
   <body class="d-flex flex-column min-vh-100">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="scanlines" aria-hidden="true"></div>
 
     {%- include partials/components/notification.html -%}
     {%- include partials/components/toast.html -%}
@@ -9,7 +11,9 @@
     {%- include partials/components/nav.html -%}
 
 
+    <main id="main-content">
     {{content}}
+    </main>
 
 
     {%- include partials/components/footer.html -%}

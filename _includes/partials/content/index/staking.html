@@ -2,6 +2,33 @@
   #staking .floating-hover {
     margin-top: -2em;
   }
+  #staking .benefit svg {
+    color: var(--color-blue);
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-top: 0.15rem;
+  }
+  #staking .benefit p {
+    font-size: 0.9rem;
+  }
+  /* All cycled words share one grid cell, so the highlight keeps the width of the
+     longest word and the text around it never reflows. */
+  #staking .word-cycle {
+    display: inline-grid;
+    text-align: center;
+  }
+  #staking .word-cycle-item {
+    grid-area: 1 / 1;
+    visibility: hidden;
+  }
+  #staking .word-cycle-item.is-active {
+    visibility: visible;
+  }
+  /* Slightly below Bootstrap's h3 default so the sentence stays on one line at desktop widths */
+  #staking h3 { font-size: 1.6rem; }
+  @media (max-width: 575.98px) {
+    #staking h3 { font-size: 1.4rem; }
+  }
 </style>
 
 
@@ -10,7 +37,8 @@
   <div class="container my-3 my-md-0 my-lg-4 p-4 py-md-5">
     <div class="row justify-content-center">
       <div class="col-12 col-lg-9 col-xl-8 col-xxl-7 p-md-3 pt-lg-3 text-center aos-up">
-        <h2 class="display-4 fw-bold lh-1 mb-3">Staking Is for Everyone</h2>
+        <p class="eyebrow">Start staking</p>
+        <h2 class="section-title">Staking is for everyone.</h2>
       </div>
     </div>
     <div class="row justify-content-center align-items-center">
@@ -19,27 +47,35 @@
       </div>
       <div class="col-12 col-xl-7 p-md-3 p-lg-5 pt-lg-3 aos-left">
         <h3 class="mb-3">
-          A <span id="wordCycle" class="bg-brand-color-1 text-dark fw-semibold fst-italic px-2 py-1">better</span> Ethereum starts with you
+          A <span id="wordCycle" class="word-cycle bg-brand-color-1 text-dark fw-semibold fst-italic px-2 py-1">
+            <span class="word-cycle-item is-active">better</span>
+            <span class="word-cycle-item">stronger</span>
+            <span class="word-cycle-item">healthier</span>
+            <span class="word-cycle-item">secure</span>
+            <span class="word-cycle-item">decentralized</span>
+            <span class="word-cycle-item">robust</span>
+            <span class="word-cycle-item">valuable</span>
+          </span> Ethereum starts with you
         </h3>
         <p class="lead">Solo staking is a great way to not only improve Ethereum, but also to generate low-risk rewards using your ETH. While solo staking is the gold standard, there's a variety of other options that each have their own requirements, risks, and considerations.</p>
-        <div class="row mt-4 fw-light fs-5">
+        <div class="row mt-4">
           <div class="col-12 col-lg-6">
-            <div class="d-flex">
-              <div class="me-4">{{site.data.icons.graph_up}}</div>
+            <div class="d-flex benefit">
+              <div class="me-3">{{site.data.icons.graph_up}}</div>
               <p class="">Earn ETH protocol rewards</p>
             </div>
-            <div class="d-flex">
-              <div class="me-4">{{site.data.icons.shield}}</div>
+            <div class="d-flex benefit">
+              <div class="me-3">{{site.data.icons.shield}}</div>
               <p class=" mb-lg-0">Secure the network</p>
             </div>
           </div>
           <div class="col-12 col-lg-6 mb-6 mb-md-0">
-            <div class="d-flex">
-              <div class="me-4">{{site.data.icons.globe}}</div>
+            <div class="d-flex benefit">
+              <div class="me-3">{{site.data.icons.globe}}</div>
               <p class="">Boost decentralization</p>
             </div>
-            <div class="d-flex">
-              <div class="me-4">{{site.data.icons.person_lock}}</div>
+            <div class="d-flex benefit">
+              <div class="me-3">{{site.data.icons.person_lock}}</div>
               <p class=" mb-0">Non-custodial</p>
             </div>
           </div>
@@ -56,33 +92,13 @@
 </section>
 
 
-{%- comment -%}
-<!-- Start Staking -->
-<section class="d-none gradient-bg3">
-  <div class="container my-3 my-md-0 my-lg-4 p-4 py-md-5">
-    <div class="row justify-content-center align-items-center">
-      <div class="col-12 col-lg-9 col-xl-8 col-xxl-7 p-md-3 p-lg-3 text-center aos-up">
-        <h2 class="display-4 fw-bold lh-1 mb-3">Start Staking</h2>
-        <p class="lead">EthStaker is a community providing guidance, education, support, and resources for existing and potential stakers to interact. EthStaker’s principal goal is to maximize decentralization of the Ethereum network.</p>
-        <div class="gap-2">
-          <a href="/staking" class="btn btn-dark btn-lg mt-4 shadow">Get started</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{%- endcomment -%}
-
-
 <script type="text/javascript">
+  // Cycles the highlighted word by toggling visibility; the words themselves live in the markup
+  var wordItems = document.querySelectorAll("#wordCycle .word-cycle-item");
   var wordIndex = 0;
-  var wordList = ["better","stronger","healthier","secure","decentralized","robust","valuable"]
-  const interval = setInterval(function() {
-    var word = document.getElementById("wordCycle");
-    wordIndex += 1;
-    if (wordIndex >= wordList.length) {
-      wordIndex = 0;
-    }
-    word.innerHTML = wordList[wordIndex];
+  setInterval(function() {
+    wordItems[wordIndex].classList.remove("is-active");
+    wordIndex = (wordIndex + 1) % wordItems.length;
+    wordItems[wordIndex].classList.add("is-active");
   }, 1000);
 </script>
