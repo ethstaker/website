@@ -4,12 +4,12 @@ title: MEV Relay List
 permalink: /mev-relay-list
 
 buttons:
-- link: 'https://github.com/ethstaker/ethstaker-knowledgebase/blob/main/docs/en/guides/MEV-relay-list.md'
+- link: 'https://github.com/ethstaker/ethstaker-knowledgebase/blob/main/docs/guides/MEV-relay-list.md'
   text: Contribute {{site.data.icons.github}}
 ---
 
 
-{%- assign markdown = "https://raw.githubusercontent.com/ethstaker/ethstaker-knowledgebase/refs/heads/main/docs/en/guides/MEV-relay-list.md" | getres | forceencode -%}
+{%- assign markdown = "https://raw.githubusercontent.com/ethstaker/ethstaker-knowledgebase/refs/heads/main/docs/guides/MEV-relay-list.md" | getres | forceencode -%}
 
 
 
