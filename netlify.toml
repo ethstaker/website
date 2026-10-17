@@ -1,6 +1,6 @@
 [build.environment]
-  BUNDLER_VERSION = "2.4.22"
-  RUBY_VERSION = "2.7.8"
+  BUNDLER_VERSION = "2.6.9"
+  RUBY_VERSION = "3.4.11"
 
 [[headers]]
   for = "/*"
