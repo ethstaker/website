@@ -25,7 +25,7 @@ This is the source code for EthStaker's website, <https://ethstaker.org>.
 
 1. Clone the repo
 1. Install dependencies: `bundle install`
-    - Ruby may need to be installed first if not already packaged with your OS
+    - Requires the Ruby version in `.ruby-version` (also used by Netlify via `netlify.toml`); a version manager such as rbenv, asdf, or mise will pick it up automatically
 1. Create a feature branch off of the `main` branch
 1. Start the local server: `bundle exec jekyll serve --config _config.yml,_config_dev.yml --incremental`
     - The `site.environment` variable can be used to only run certain operations in production vs development

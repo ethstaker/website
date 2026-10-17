@@ -4,6 +4,7 @@
 #   input = A data collection
 #   {{ site.data.people | yamltojson }}
 
+require 'active_support'
 require 'active_support/core_ext/hash'
 require 'json'
 require 'yaml'
@@ -16,11 +17,11 @@ module Jekyll
     end
 
     def xmltoyaml(input)
-      YAML.load(Hash.from_xml(input).to_yaml)
+      YAML.unsafe_load(Hash.from_xml(input).to_yaml)
     end
 
     def jsontoyaml(input)
-      YAML.load(input.to_yaml)
+      YAML.unsafe_load(input.to_yaml)
     end
 
     def jsontoxml(input)

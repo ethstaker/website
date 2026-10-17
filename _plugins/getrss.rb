@@ -5,6 +5,7 @@
 #   {%- assign feed = "https://rhinoreview.substack.com/feed" | rss_feed_url -%}
 
 require 'net/http'
+require 'active_support'
 require 'active_support/core_ext/hash/conversions'
 require 'yaml'
 require 'rainbow'
@@ -18,7 +19,7 @@ module Jekyll
         abort("ERROR: Fetch failed: getres('#{rss_feed_url}')")
       end
       xml = res.body
-      YAML.load(Hash.from_xml(xml).to_yaml)
+      YAML.unsafe_load(Hash.from_xml(xml).to_yaml)
     end
 
   end
